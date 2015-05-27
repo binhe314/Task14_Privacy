@@ -18,8 +18,8 @@ public class Controller extends HttpServlet {
 
 	public void init() throws ServletException {
         Model model = new Model();
-
-  //      Action.add(new AddAction(model));
+        Action.add(new OptOutAction(model));
+        Action.add(new WhoWeAreAction(model));
         
     }
 
