@@ -5,15 +5,11 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import model.FavoriteDAO;
 import model.Model;
-import model.UserDAO;
 
 import org.mybeans.form.FormBeanFactory;
 
-import databeans.Favorite;
 import databeans.User;
-import formbeans.FavoriteForm;
 
 public class OptOutAction extends Action {
 //		private FormBeanFactory<FavoriteForm> formBeanFactory = FormBeanFactory
@@ -40,17 +36,22 @@ public class OptOutAction extends Action {
 			
 			try {
 
-				request.setAttribute("userList", userDAO.getUsers());
+//				request.setAttribute("userList", userDAO.getUsers());
 
-				User user = (User) request.getSession(false).getAttribute("user");
-				Favorite[] favoriteList = favoriteDAO.getItems(user.getUserId());
-				request.setAttribute("favoriteList", favoriteList);
+//				User user = (User) request.getSession(false).getAttribute("user");
+				
+//				Favorite[] favoriteList = favoriteDAO.getItems(user.getUserId());
+//				request.setAttribute("favoriteList", favoriteList);
+				
+				String institutionName = request.getParameter("institutionName");
+				String tele = request.getParameter("tele");
+				String link = request.getParameter("link");
 
-				return "favorite.jsp";
+				return "3opt-out.jsp";
 			} catch (Exception e) {
 				//System.out.println("e2 = " + e.toString());
 				errors.add(e.getMessage());
-				return "favorite.jsp";
+				return "3opt-out.jsp";
 			}
 		}
 	
