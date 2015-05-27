@@ -7,10 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import model.Model;
-import databeans.User;
+import databeans.Company;
 
 public class Controller extends HttpServlet {
 
@@ -18,8 +17,11 @@ public class Controller extends HttpServlet {
 
 	public void init() throws ServletException {
         Model model = new Model();
+        Company company = new Company();
 
   //      Action.add(new AddAction(model));
+        Action.add(new WelcomeAction(model));
+        
         
     }
 
