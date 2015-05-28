@@ -63,7 +63,7 @@
 										</select>
 										<div style="text-align: right">
 											<button type="submit" class="btn btn-default">
-												<a href="5definition.html">Previous</a>
+												<a href="5definition.jsp">Previous</a>
 											</button>
 											<button type="submit" class="btn btn-default">
 												Continue</a>

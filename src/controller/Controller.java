@@ -20,10 +20,7 @@ public class Controller extends HttpServlet {
         Model model = new Model();
         
         Action.add(new WelcomeAction(model));
-<<<<<<< Updated upstream
-=======
         Action.add(new OtherInfoAction());
->>>>>>> Stashed changes
         Action.add(new OptOutAction(model));
         Action.add(new WhoWeAreAction(model));
         Action.add(new ReasonAction(model));
