@@ -281,7 +281,7 @@
 				</tbody>
 				</table>
 
-<div style="text-align:right">
+			<div style="text-align:right">
 				<input type="submit" class="btn btn-default" name="action" value="Previous">
 				<input type="submit" class="btn btn-default" name="action" value="Continue">
 			</div>

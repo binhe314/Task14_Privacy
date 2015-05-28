@@ -93,9 +93,9 @@
 					</p>
 				</div>
 				<div style="text-align:right">
-				<button type="submit" class="btn btn-default"><a href="3opt-out.jsp">Previous</a></button>
-				<button type="submit" class="btn btn-default"><a href="5definition.jsp">Continue</a></button>
-			</div>
+				<input type="submit" class="btn btn-default" name="action" value="Previous">
+				<input type="submit" class="btn btn-default" name="action" value="Continue">
+				</div>
 			</form>
 		</div>
 	</div>

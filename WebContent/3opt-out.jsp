@@ -81,10 +81,11 @@
 					Call <input type="text" name="companyPhone" value=${company.companyPhone}> or go to <input type="text" name="companyUrl" value=${company.companyUrl}>
 					</p>
 				</div>
+		
 				<div style="text-align:right">
-				<button type="submit" class="btn btn-default"><a href="2reason.jsp">Previous</a></button>
-				<button type="submit" class="btn btn-default"><a href="4who we are.jsp">Continue</a></button>
-			</div>
+				<input type="submit" class="btn btn-default" name="action" value="Previous">
+				<input type="submit" class="btn btn-default" name="action" value="Continue">
+				</div>
 			</form>
 		</div>
 	</div>

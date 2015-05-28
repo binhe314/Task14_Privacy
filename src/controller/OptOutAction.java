@@ -29,12 +29,12 @@ public class OptOutAction extends Action {
 			try {
 
 				Company company = (Company) request.getSession(false).getAttribute("company");
-				
+				String action = (String) request.getParameter("action");
+
 				request.setAttribute("companyName", company.getCompanyName());
 				request.setAttribute("companyUrl", company.getCompanyUrl());
 				request.setAttribute("companyPhone", company.getCompanyPhone());
 				
-				System.out.println("year 1 is " + request.getParameter("year1"));
 				company.setYear1(request.getParameter("year1"));
 				company.setYear2(request.getParameter("year2"));
 				company.setDay(request.getParameter("day"));
@@ -43,10 +43,16 @@ public class OptOutAction extends Action {
 //				ArrayList<String> limitMarketingList = (ArrayList<String>)request.getAttribute("limitMarketing");
 //				company.setLimitSharingList(limitSharingList);
 //				company.setLimitMarketingList(limitMarketingList);
-				
+								
 				request.getSession(false).setAttribute("company", company);
 				
-				return "3opt-out.jsp";
+				if (action.equals("Previous")) {
+					return "2reason.jsp";
+				} else if (action.equals("Continue")) {
+					return "4who we are.jsp";
+				} else {
+					return "3opt-out.jsp";
+				}
 			} catch (Exception e) {
 				errors.add(e.getMessage());
 				return "3opt-out.jsp";

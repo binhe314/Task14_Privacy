@@ -30,7 +30,8 @@ public class WhoWeAreAction extends Action{
 		try {
 
 			Company company = (Company) request.getSession(false).getAttribute("company");
-			
+			String action = (String) request.getParameter("action");
+
 			request.setAttribute("companyName", company.getCompanyName());
 			request.setAttribute("companyUrl", company.getCompanyUrl());
 			request.setAttribute("companyPhone", company.getCompanyPhone());
@@ -42,7 +43,14 @@ public class WhoWeAreAction extends Action{
 			
 			request.getSession(false).setAttribute("company", company);
 			
-			return "4who we are.jsp";
+			if (action.equals("Previous")) {
+				return "3opt-out.jsp";
+			} else if (action.equals("Continue")) {
+				return "5definition.jsp";
+			} else {
+				return "4who we are.jsp";
+			}
+
 		} catch (Exception e) {
 			//System.out.println("e2 = " + e.toString());
 			errors.add(e.getMessage());
