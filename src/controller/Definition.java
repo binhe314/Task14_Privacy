@@ -13,16 +13,17 @@ import org.mybeans.form.FormBeanFactory;
 import databeans.Company;
 import form.WelcomeForm;
 
-public class WelcomeAction extends Action {
+public class Definition extends Action {
 
 	private FormBeanFactory<WelcomeForm> formBeanFactory = FormBeanFactory
 			.getInstance(WelcomeForm.class);
 
-	public WelcomeAction(Model model) {
+
+	public Definition(Model model) {
 	}
 
 	public String getName() {
-		return "welcome.do";
+		return "definition.do";
 	}
 
 	public String perform(HttpServletRequest request) {

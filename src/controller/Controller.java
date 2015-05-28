@@ -18,10 +18,8 @@ public class Controller extends HttpServlet {
 
 	public void init() throws ServletException {
         Model model = new Model();
-
         
         Action.add(new WelcomeAction(model));
-        
         Action.add(new OptOutAction(model));
         Action.add(new WhoWeAreAction(model));
         
@@ -51,7 +49,6 @@ public class Controller extends HttpServlet {
         	company = new Company();
         	session.setAttribute("company", company);
         }
-        
       	// Let the logged in user run his chosen action
 		return Action.perform(action,request);
     }
