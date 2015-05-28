@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.Model;
 import databeans.Company;
@@ -18,9 +19,7 @@ public class Controller extends HttpServlet {
 	public void init() throws ServletException {
         Model model = new Model();
 
-        Company company = new Company();
-
-  //      Action.add(new AddAction(model));
+        
         Action.add(new WelcomeAction(model));
         
         Action.add(new OptOutAction(model));
@@ -44,19 +43,13 @@ public class Controller extends HttpServlet {
      * @return the next page (the view)
      */
     private String performTheAction(HttpServletRequest request) {
-//        HttpSession session     = request.getSession(true);
         String      servletPath = request.getServletPath();
-//        User        user = (User) session.getAttribute("user");
         String      action = getActionName(servletPath);
-
-//        if (user == null) {
-//        	// If the user hasn't logged in, so login is the only option
-//			return Action.perform("login.do",request);
-//        }
-        
-        if (action.equals("welcome")) {
-        	// User is logged in, but at the root of our web app
-			return Action.perform("index.do",request);
+        HttpSession session     = request.getSession(true);
+        Company company = (Company) session.getAttribute("company");
+        if (company == null) {
+        	company = new Company();
+        	session.setAttribute("company", company);
         }
         
       	// Let the logged in user run his chosen action
