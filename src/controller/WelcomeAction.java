@@ -49,7 +49,7 @@ public class WelcomeAction extends Action {
 					company.setCompanyUrl(form.getCompanyUrl());
 					company.setCompanyPhone(form.getCompanyPhone());
 					session.setAttribute("company", company);
-					return "index.jsp";
+					return "1fact.jsp";
 				}
 			}
 			return "welcome.jsp";
