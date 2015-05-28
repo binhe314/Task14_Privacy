@@ -54,9 +54,9 @@ public class Company {
 	private ArrayList<String> shareOrNot;
 	private ArrayList<String> shareLimit;
 
-	private int year1;
-	private int year2;
-	private int day;
+	private String year1;
+	private String year2;
+	private String day;
 	
 	
 	private String generalAffiliates;
@@ -70,27 +70,27 @@ public class Company {
 	private ArrayList<Boolean> personalInfo;
 	private ArrayList<Boolean> limit;
 
-	public int getYear1() {
+	public String getYear1() {
 		return year1;
 	}
 
-	public void setYear1(int year1) {
+	public void setYear1(String year1) {
 		this.year1 = year1;
 	}
 
-	public int getYear2() {
+	public String getYear2() {
 		return year2;
 	}
 
-	public void setYear2(int year2) {
+	public void setYear2(String year2) {
 		this.year2 = year2;
 	}
 
-	public int getDay() {
+	public String getDay() {
 		return day;
 	}
 
-	public void setDay(int day) {
+	public void setDay(String day) {
 		this.day = day;
 	}
 
