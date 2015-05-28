@@ -64,6 +64,11 @@ public class Company {
 	private String affiliateSeeMoreAt;
 	private String nonAffiliates;
 	private String jointMarketing;
+	
+	private ArrayList<Boolean> limitSharing;
+	private ArrayList<Boolean> limitMarketing;
+	private ArrayList<Boolean> personalInfo;
+	private ArrayList<Boolean> limit;
 
 	public int getYear1() {
 		return year1;
@@ -135,6 +140,36 @@ public class Company {
 
 	public void setShareLimit(ArrayList<String> shareLimit) {
 		this.shareLimit = shareLimit;
+	}
+	public ArrayList<Boolean> getLimitSharing() {
+		return limitSharing;
+	}
+
+	public void setLimitSharing(ArrayList<Boolean> limitSharing) {
+		this.limitSharing = limitSharing;
+	}
+	
+	public ArrayList<Boolean> getLimitMarketing() {
+		return limitMarketing;
+	}
+
+	public void setLimitMarketing(ArrayList<Boolean> limitMarketing) {
+		this.limitMarketing = limitMarketing;
+	}
+	
+	public ArrayList<Boolean> getPersonalInfo() {
+		return personalInfo;
+	}
+
+	public void setPersonalInfo(ArrayList<Boolean> personalInfo) {
+		this.personalInfo = personalInfo;
+	}
+	public ArrayList<Boolean> getLimit() {
+		return limit;
+	}
+
+	public void setLimit(ArrayList<Boolean> limit) {
+		this.limit = limit;
 	}
 
 }
