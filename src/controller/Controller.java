@@ -17,16 +17,14 @@ public class Controller extends HttpServlet {
 
 	public void init() throws ServletException {
         Model model = new Model();
-<<<<<<< HEAD
+
         Company company = new Company();
 
   //      Action.add(new AddAction(model));
         Action.add(new WelcomeAction(model));
         
-=======
         Action.add(new OptOutAction(model));
         Action.add(new WhoWeAreAction(model));
->>>>>>> 5e4d8fa9d0fd29e1493d2324bce7bad5ce990483
         
     }
 
