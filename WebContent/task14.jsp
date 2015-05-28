@@ -254,7 +254,7 @@ This information can include: <br />
 
 			<button type="submit" class="btn btn-default"> <a href="task14.html" id="DownloadLink" onclick="exportXML()" download="task14.xml">Download
 			As XML</a></button>
-			<button type="submit" class="btn btn-default"> <a href="task14.html" id="DownloadLink" download="agreement.html">Download
+			<button type="submit" class="btn btn-default"> <a href="task14.jsp" id="DownloadLink" download="agreement.html">Download
 			As HTML</a></button>
 		<button type="submit" class="btn btn-default">Export As PDF</button>
 	</div>
