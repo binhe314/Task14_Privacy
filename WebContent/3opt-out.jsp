@@ -46,42 +46,39 @@
 				<div class="form-group">
 					<h4>To limit our sharing</h4>
 					<p>
-					<input type="checkbox" name="call" /> Call <c:if test="${tele == null}"><input type="text" name="tele" /></c:if>
-					<c:if test="${tele != null }">${tele }</c:if>
+					<input type="checkbox" name="limitSharing" value="1" > Call <input type="text" name="companyPhone" value=${companyPhone}>
 					 our menu will prompt you through your choices.<br>
-    <input type="checkbox" name="online" />Online banking customers log on to a secure session at <c:if test="${link == null}"><input type="text" name="link" /></c:if>
-					<c:if test="${link != null }">${link }</c:if>
-    , and choose Change Privacy Preferences under the Account Services tab.<br>
-    <input type="checkbox" name="associate" />Talk to a banking center associate<br>
-    <input type="checkbox" name="repre" />Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
-    <b>Please note:<br></b>
-    If you are a new customer, we can begin sharing your information <input type="text" name="days"> 
-    days from the date we sent this notice. When you are no longer our customer, we can continue to share
-     your information as described in this notice. However, you can contact us at any time to limit our
-      sharing.
+                    <input type="checkbox" name="limitSharing" value="2" >Online banking customers log on to a secure session at <input type="text" name="companyUrl" value=${companyUrl}>
+					
+                    , and choose Change Privacy Preferences under the Account Services tab.<br>
+                    <input type="checkbox" name="limitSharing" value="3" >Talk to a banking center associate<br>
+                    <input type="checkbox" name="limitSharing" value="4" >Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
+                    <b>Please note:<br></b>
+                     If you are a new customer, we can begin sharing your information <input type="text" name="day"> 
+                    days from the date we sent this notice. When you are no longer our customer, we can continue to share
+                     your information as described in this notice. However, you can contact us at any time to limit our
+                    sharing.
 					</p>
 				</div>
 				<div class="form-group">
 					 <h4>To limit direct marketing</h4>
 					 <p>
-					 <input type="checkbox" name="" /> Call <c:if test="${tele == null}"><input type="text" name="tele" /></c:if>
-					<c:if test="${tele != null }">${tele }</c:if> our menu will prompt you through your choices.<br>
-    <input type="checkbox" name="" />Online banking customers log on to a secure session at <c:if test="${link == null}"><input type="text" name="link" /></c:if>
-					<c:if test="${link != null }">${link }</c:if>, and choose Change Privacy Preferences under the Account Services tab.<br>
-    <input type="checkbox" name="" />Talk to a banking center associate<br>
-    <input type="checkbox" name="" />Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
-    <b>Please note:<br></b>
-    A Do Not Call election is effective for <input type="text" name="years1"> years, or while you are an active consumer customer, if longer than <input type="text" name="years1"> years. The Do Not Mail election is effective for <input type="text" name="years2"> years.
-    You may continue to receive marketing information in regular account mailings and statements when you visit us online or at an ATM.
-    You may also be contacted to service your account or participate in surveys. If you have an assigned client manager or team, they may continue to contact you to assist you in managing your portfolio or account relationship.
+					 <input type="checkbox" name="limitMarketing" value="1" > Call<input type="text" name="companyPhone" value=${companyPhone}>
+					 our menu will prompt you through your choices.<br>
+                     <input type="checkbox" name="limitMarketing" value="2" >Online banking customers log on to a secure session at <input type="text" name="companyUrl" value=${companyUrl}>
+					 , and choose Change Privacy Preferences under the Account Services tab.<br>
+                     <input type="checkbox" name="limitMarketing" value="3" >Talk to a banking center associate<br>
+                     <input type="checkbox" name="limitMarketing" value="4" >Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
+                     <b>Please note:<br></b>
+                     A Do Not Call election is effective for <input type="text" name="year1"> years, or while you are an active consumer customer, if longer than <input type="text" name="year1"> years. The Do Not Mail election is effective for <input type="text" name="year2"> years.
+                     You may continue to receive marketing information in regular account mailings and statements when you visit us online or at an ATM.
+                     You may also be contacted to service your account or participate in surveys. If you have an assigned client manager or team, they may continue to contact you to assist you in managing your portfolio or account relationship.
 					</p>
 				</div>
 				<div class="form-group">
 					<h4>Questions</h4>
 					<p>
-					Call <c:if test="${tele == null}"><input type="text" name="tele" /></c:if>
-					<c:if test="${tele != null }">${tele }</c:if> or go to <c:if test="${link == null}"><input type="text" name="link" /></c:if>
-					<c:if test="${link != null }">${link }</c:if>
+					Call <input type="text" name="companyPhone" value=${companyPhone}> or go to <input type="text" name="companyUrl" value=${companyUrl}>
 					</p>
 				</div>
 				<div style="text-align:right">

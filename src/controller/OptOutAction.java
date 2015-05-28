@@ -9,18 +9,12 @@ import model.Model;
 
 import org.mybeans.form.FormBeanFactory;
 
+import databeans.Company;
 import databeans.User;
 
 public class OptOutAction extends Action {
-//		private FormBeanFactory<FavoriteForm> formBeanFactory = FormBeanFactory
-//				.getInstance(FavoriteForm.class);
-//
-//		private FavoriteDAO favoriteDAO;
-//		private UserDAO userDAO;
-
 		public OptOutAction(Model model) {
-//			favoriteDAO = model.getFavoriteDAO();
-//			userDAO = model.getUserDAO();
+
 		}
 
 		public String getName() {
@@ -28,28 +22,31 @@ public class OptOutAction extends Action {
 		}
 
 		public String perform(HttpServletRequest request) {
-			// Set up the request attributes (the errors list and the form bean so
-			// we can just return to the jsp with the form if the request isn't
-			// correct)
+			
 			List<String> errors = new ArrayList<String>();
 			request.setAttribute("errors", errors);
 			
 			try {
 
-//				request.setAttribute("userList", userDAO.getUsers());
-
-//				User user = (User) request.getSession(false).getAttribute("user");
+				Company company = (Company) request.getSession(false).getAttribute("company");
 				
-//				Favorite[] favoriteList = favoriteDAO.getItems(user.getUserId());
-//				request.setAttribute("favoriteList", favoriteList);
+				request.setAttribute("companyName", company.getCompanyName());
+				request.setAttribute("companyUrl", company.getCompanyUrl());
+				request.setAttribute("companyPhone", company.getCompanyPhone());
 				
-				String institutionName = request.getParameter("institutionName");
-				String tele = request.getParameter("tele");
-				String link = request.getParameter("link");
-
+				company.setYear1((int)request.getAttribute("year1"));
+				company.setYear2((int)request.getAttribute("year2"));
+				company.setDay((int)request.getAttribute("day"));
+				
+				ArrayList<String> limitSharingList = (ArrayList<String>)request.getAttribute("limitSharing");
+				ArrayList<String> limitMarketingList = (ArrayList<String>)request.getAttribute("limitMarketing");
+				company.setLimitSharingList(limitSharingList);
+				company.setLimitMarketingList(limitMarketingList);
+				
+				request.getSession(false).setAttribute("company", company);
+				
 				return "3opt-out.jsp";
 			} catch (Exception e) {
-				//System.out.println("e2 = " + e.toString());
 				errors.add(e.getMessage());
 				return "3opt-out.jsp";
 			}
