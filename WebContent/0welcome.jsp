@@ -50,9 +50,12 @@
 					<div class="form-group">
 						<p class="help-block">Please upload file if you want to
 							continue previous modification.</p>
-						<label for="exampleInputFile">File upload</label><input
-							type="file" id="exampleInputFile">
-						
+						<label for="uploadFile">File upload</label>
+						<input type="file"
+							id="uploadFile" name="file" value="${filename}">
+						<div style="text-align: right">
+							<input type="submit" class="btn btn-default" name="upload" value="Upload File"/>
+						</div>
 					</div>
 
 					or  Start a new one:
