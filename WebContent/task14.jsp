@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,20 +72,23 @@ p {
 	<hr />
 	<table align="center" id="table1">
 		<tr>
-			<th colspan="2" class="th1"><b>FACTS:</b> What does BANK do with
-				your personal information?</th>
+			<th colspan="2" class="th1"><b>FACTS:</b> What does do with ${company.companyName} your personal information?</th>
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Why?</b></td>
-			<td width="70%" id="why"></td>
+			<td width="70%" id="why">Financial companies choose how they share your personal information. Under federal law, that means personally identifiable information. Federal law gives consumers the right to limit some but not all sharing. Federal law also requires us to tell you how we collect, share, and protect your personal information. Please read this notice carefully to understand what we do.</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>What?</b></td>
-			<td id="what"></td>
+			<td id="what">The types of personal information we collect and share depend on the product or service you have with us. <br />
+This information can include: <br />
+- Social Security number and employment information  <br />
+- Account balances, transaction history and credit information <br />
+- Assets and investment experience </td>
 		</tr>
 		<tr>
 			<td class="td2"><b>How?</b></td>
-			<td id="how"></td>
+			<td id="how">All financial companies need to share customers’ personal information to run their everyday business. In the section below, we list the reasons financial companies can share their customers’ personal information; the reasons ${company.companyName} chooses to share; and whether you can limit this sharing.</td>
 		</tr>
 	</table>
 
@@ -92,58 +99,58 @@ p {
 			<th class="th1"><b>Reasons we can share your personal
 					information</b>
 			</td>
-			<th class="th1"><b>Does Bank share?</b>
+			<th class="th1"><b>Does ${company.companyName} share?</b>
 			</td>
 			<th class="th1"><b>Can you limit this sharing?</b>
 			</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>For our everyday business purposes</b> - such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureaus</td>
-			<td id="BankShare1"></td>
-			<td id="LimitShare1"></td>
+			<td id="BankShare1">${company.shareOrNot.get(0) }</td>
+			<td id="LimitShare1">${company.shareLimit.get(0) }</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>For our marketing purposes</b> - to offer our products and services to you</td>
-			<td id="BankShare2"></td>
-			<td id="LimitShare2"></td>
+			<td id="BankShare2">${company.shareOrNot.get(1) }</td>
+			<td id="LimitShare2">${company.shareLimit.get(1) }</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>For joint marketing with other financial
 					companies</b></td>
-			<td id="BankShare3"></td>
-			<td id="LimitShare3"></td>
+			<td id="BankShare3">${company.shareOrNot.get(2) }</td>
+			<td id="LimitShare3">${company.shareLimit.get(2) }</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>For our affiliates' everyday business
 					purposes</b> - information about your transactions and experiences</td>
-			<td id="BankShare4"></td>
-			<td id="LimitShare4"></td>
+			<td id="BankShare4">${company.shareOrNot.get(3) }</td>
+			<td id="LimitShare4">${company.shareLimit.get(3) }</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>For our affiliates' everyday business
 					purposes</b> - information about your credit worthiness</td>
-			<td id="BankShare5"></td>
-			<td id="LimitShare5"></td>
+			<td id="BankShare5">${company.shareOrNot.get(4) }</td>
+			<td id="LimitShare5">${company.shareLimit.get(4) }</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>For our affiliates to market to you</b></td>
-			<td id="BankShare6"></td>
-			<td id="LimitShare6"></td>
+			<td id="BankShare6">${company.shareOrNot.get(5) }</td>
+			<td id="LimitShare6">${company.shareLimit.get(5) }</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>For nonaffiliates to market to you</b> - for all credit card accounts</td>
-			<td id="BankShare7"></td>
-			<td id="LimitShare7"></td>
+			<td id="BankShare7">${company.shareOrNot.get(6) }</td>
+			<td id="LimitShare7">${company.shareLimit.get(6) }</td>
 		</tr>
 		<tr>
 		<td class="td2"><b>For nonaffiliates to market to you</b> - for accounts and services endorsed by another organization (e.g., debit card co-branded with a baseball team) "Sponsored Accounts"</td>
-		<td></td>
-		<td></td>
+		<td>${company.shareOrNot.get(7) }</td>
+		<td>${company.shareLimit.get(7) }</td>
 		</tr>
 		<tr>
 		<td class="td2"><b>For nonaffiliates to market to you</b> - for accounts other than credit card accounts and Sponsored Accounts, such as insurance, investments, deposit and lending</td>
-		<td></td>
-		<td></td>
+		<td>${company.shareOrNot.get(8) }</td>
+		<td>${company.shareLimit.get(8) }</td>
 		</tr>
 	</table>
 
@@ -155,8 +162,12 @@ p {
 			<td width="70%" id="ifLimitShare"></td>
 		</tr>
 		<tr>
+		<td class="td2"> <b>To limit direct marketing</b></td>
+		<td></td>
+		</tr>
+		<tr>
 			<td class="td2"><b>Questions?</b></td>
-			<td id="questions"></td>
+			<td id="questions">Call ${company.companyPhone } or go to ${company.companyUrl }</td>
 		</tr>
 	</table>
 
@@ -172,7 +183,7 @@ p {
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Who is providing this notice?</b></td>
-			<td width="70%" id="whoProviding"></td>
+			<td width="70%" id="whoProviding">${company.companyName }</td>
 		</tr>
 	</table>
 
@@ -183,12 +194,14 @@ p {
 			<th colspan="2" class="th1"><b>What we do</b></th>
 		</tr>
 		<tr>
-			<td class="td2" width="30%"><b>How does BANK protect my
+			<td class="td2" width="30%"><b>How does ${company.companyName} protect my
 					personal information?</b></td>
-			<td width="70%" id="howProtect"></td>
+			<td width="70%" id="howProtect">
+			To protect your personal information from unauthorized access and use, we use security measures that comply with federal law. These measures include computer safeguards and secured files and buildings. For more information, visit ${company.companyUrl }. 
+			</td>
 		</tr>
 		<tr>
-			<td class="td2" width="30%"><b>How does BANK collect my
+			<td class="td2" width="30%"><b>How does ${company.companyName} collect my
 					personal information?</b></td>
 			<td width="70%" id="howCollect"></td>
 		</tr>
