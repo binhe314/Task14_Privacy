@@ -34,6 +34,7 @@ public class OptOutAction extends Action {
 				request.setAttribute("companyUrl", company.getCompanyUrl());
 				request.setAttribute("companyPhone", company.getCompanyPhone());
 				
+				System.out.println("year 1 is " + request.getParameter("year1"));
 				company.setYear1((int)request.getAttribute("year1"));
 				company.setYear2((int)request.getAttribute("year2"));
 				company.setDay((int)request.getAttribute("day"));
