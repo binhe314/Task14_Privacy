@@ -13,6 +13,31 @@ public class Company {
 	private String location;
 	private ArrayList<String> shareOrNot;
 	private ArrayList<String> shareLimit;
+	
+	private int year1;
+	private int year2;
+	private int day;
+	
+	public int getYear1() {
+		return year1;
+	}
+	public void setYear1(int year1) {
+		this.year1 = year1;
+	}
+	public int getYear2() {
+		return year2;
+	}
+	public void setYear2(int year2) {
+		this.year2 = year2;
+	}
+	public int getDay() {
+		return day;
+	}
+	public void setDay(int day) {
+		this.day = day;
+	}
+	
+	
 
 	
 	
