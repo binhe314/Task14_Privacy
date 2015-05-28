@@ -49,24 +49,24 @@
 				<div class="form-group">
 					<h4>who is providing this notice?</h4>
 					<p>
-					<input type="text" name="companyName">
+					<input type="text" name="companyName" value=${company.companyName}>
 					</p>
 				</div>
 				<div class="form-group">
 					 <h3>What We Do?</h3>
 				</div>
 				<div class="form-group">
-					 <h4>How does <input type="text" name="companyName" value=${companyName} >
+					 <h4>How does <input type="text" name="companyName" value=${company.companyName} >
 					  protect my personal information?</h4>
 					 <p>
 					 To protect your personal information from unauthorized access and use, 
                      we use security measures that comply with federal law. These measures include 
                      computer safeguards and secured files and buildings. For more information, 
-                     visit <input type="text" name="companyUrl">
+                     visit <input type="text" name="companyUrl" value=${company.companyUrl}>
 					</p>
 				</div>
 				<div class="form-group">
-					<h4>How does <input type="text" name="companyName" value=${companyName} > collect my personal information?</h4>
+					<h4>How does <input type="text" name="companyName" value=${company.companyName} > collect my personal information?</h4>
 					<p>
 					 We collect your personal information, for example, when you:<br>
                     <input type="checkbox" name="personalInfo" value="1" >Open an account or make deposits or withdrawals from your accounts<br>
@@ -94,7 +94,7 @@
 				</div>
 				<div style="text-align:right">
 				<button type="submit" class="btn btn-default"><a href="3opt-out.jsp">Previous</a></button>
-				<button type="submit" class="btn btn-default"><a href="5definition.html">Continue</a></button>
+				<button type="submit" class="btn btn-default"><a href="5definition.jsp">Continue</a></button>
 			</div>
 			</form>
 		</div>
