@@ -22,6 +22,7 @@ public class Controller extends HttpServlet {
         Action.add(new WelcomeAction(model));
         Action.add(new OptOutAction(model));
         Action.add(new WhoWeAreAction(model));
+        Action.add(new ReasonAction(model));
         
     }
 

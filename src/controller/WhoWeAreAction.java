@@ -42,11 +42,11 @@ public class WhoWeAreAction extends Action{
 			
 			request.getSession(false).setAttribute("company", company);
 			
-			return "4Who we are.jsp";
+			return "4who we are.jsp";
 		} catch (Exception e) {
 			//System.out.println("e2 = " + e.toString());
 			errors.add(e.getMessage());
-			return "4Who we are.jsp";
+			return "4who we are.jsp";
 		}
 	}
 	

@@ -83,7 +83,7 @@
 				</div>
 				<div style="text-align:right">
 				<button type="submit" class="btn btn-default"><a href="2reason.jsp">Previous</a></button>
-				<button type="submit" class="btn btn-default"><a href="4Who we are.jsp">Continue</a></button>
+				<button type="submit" class="btn btn-default"><a href="4who we are.jsp">Continue</a></button>
 			</div>
 			</form>
 		</div>

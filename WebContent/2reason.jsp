@@ -1,5 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Reason</title>
@@ -16,6 +20,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -39,7 +44,7 @@
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-			<form role="form" id="form">
+			<form role="form" id="form" method="POST" action="reason.do">
 				<table class="table">
 				<thead>
 					<tr>
@@ -47,7 +52,7 @@
 							Reasons we can share your personal information
 						</th>
 						<th>
-							Does [insert institute name] share?
+							Does ${company.companyName} share?
 						</th>
 						<th>
 							Can you limit this sharing?
@@ -61,7 +66,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" name="first" onclick="change1(this)">
+							<select id="first" name="shareOrNot" onclick="change1(this)">
 								<option id="yes" value="Yes">Yes</option>
 								<option id="no" value="No">No</option>
 								<option id="unknown" value="Noshare">We don't share it</option>
@@ -72,7 +77,7 @@
 						
 						<td>
 							<div class="btn-group">
-							<select id="second" name="second">
+							<select id="second" name="shareLimit">
 								<option id="yes12" value="Yes">Yes</option>
 								<option id="no12" value="No">No</option>
 								<option id="unknown12" value="Noshare">We don't share it</option>
@@ -87,7 +92,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" onclick="change2(this)">
+							<select id="first" name="shareOrNot" onclick="change2(this)">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="Noshare">We don't share it</option>
@@ -96,7 +101,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="second">
+							<select id="second" name="shareLimit">
 								<option id="yes22" value="Yes">Yes</option>
 								<option id="no22" value="No">No</option>
 								<option id="unknown22" value="Noshare">We don't share it</option>
@@ -111,7 +116,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" onclick="change3(this)">
+							<select id="first" name="shareOrNot" onclick="change3(this)">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="Noshare">We don't share it</option>
@@ -120,7 +125,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="second">
+							<select id="second" name="shareLimit">
 								<option id="yes32" value="Yes">Yes</option>
 								<option id="no32" value="No">No</option>
 								<option id="unknown32" value="Noshare">We don't share it</option>
@@ -135,7 +140,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" onclick="change4(this)">
+							<select id="first" name="shareOrNot" onclick="change4(this)">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="Noshare">We don't share it</option>
@@ -144,7 +149,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="second">
+							<select id="second" name="shareLimit">
 								<option id="yes42" value="Yes">Yes</option>
 								<option id="no42" value="No">No</option>
 								<option id="unknown42" value="Noshare">We don't share it</option>
@@ -159,7 +164,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" onclick="change5(this)">
+							<select id="first" name="shareOrNot" onclick="change5(this)">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="Noshare">We don't share it</option>
@@ -168,7 +173,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="second">
+							<select id="second" name="shareLimit">
 								<option id="yes52" value="Yes">Yes</option>
 								<option id="no52" value="No">No</option>
 								<option id="unknown52" value="Noshare">We don't share it</option>
@@ -183,7 +188,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" onclick="change6(this)">
+							<select id="first" name="shareOrNot" onclick="change6(this)">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="Noshare">We don't share it</option>
@@ -192,7 +197,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="second">
+							<select id="second" name="shareLimit">
 								<option id="yes62" value="Yes">Yes</option>
 								<option id="no62" value="No">No</option>
 								<option id="unknown62" value="Noshare">We don't share it</option>
@@ -207,7 +212,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" onclick="change7(this)">
+							<select id="first" name="shareOrNot" onclick="change7(this)">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="Noshare">We don't share it</option>
@@ -216,7 +221,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="second">
+							<select id="second" name="shareLimit">
 								<option id="yes72" value="Yes">Yes</option>
 								<option id="no72" value="No">No</option>
 								<option id="unknown72" value="Noshare">We don't share it</option>
@@ -231,7 +236,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" onclick="change8(this)">
+							<select id="first" name="shareOrNot" onclick="change8(this)">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="Noshare">We don't share it</option>
@@ -240,7 +245,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="second">
+							<select id="second" name="shareLimit">
 								<option id="yes82" value="Yes">Yes</option>
 								<option id="no82" value="No">No</option>
 								<option id="unknown82" value="Noshare">We don't share it</option>
@@ -255,7 +260,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="first" onclick="change9(this)">
+							<select id="first" name="shareOrNot" onclick="change9(this)">
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 								<option value="Noshare">We don't share it</option>
@@ -264,7 +269,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-							<select id="second">
+							<select id="second" name="shareLimit">
 								<option id="yes92" value="Yes">Yes</option>
 								<option id="no92" value="No">No</option>
 								<option id="unknown92" value="Noshare">We don't share it</option>
@@ -277,8 +282,8 @@
 				</table>
 
 <div style="text-align:right">
-				<button type="submit" class="btn btn-default"><a href="1fact.html">Previous</a></button>
-				<button type="submit" class="btn btn-default"><a href="3opt-out.html">Continue</a></button>
+				<input type="submit" class="btn btn-default" name="action" value="Previous">
+				<input type="submit" class="btn btn-default" name="action" value="Continue">
 			</div>
 			</form>
 		</div>
@@ -376,7 +381,6 @@ function change9(a) {
 	}
 }
 </script>
-						
 						
 </body>
 </html>
