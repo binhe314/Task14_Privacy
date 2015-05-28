@@ -38,10 +38,10 @@ public class OptOutAction extends Action {
 				company.setYear2((int)request.getAttribute("year2"));
 				company.setDay((int)request.getAttribute("day"));
 				
-				ArrayList<String> limitSharingList = (ArrayList<String>)request.getAttribute("limitSharing");
-				ArrayList<String> limitMarketingList = (ArrayList<String>)request.getAttribute("limitMarketing");
-				company.setLimitSharingList(limitSharingList);
-				company.setLimitMarketingList(limitMarketingList);
+//				ArrayList<String> limitSharingList = (ArrayList<String>)request.getAttribute("limitSharing");
+//				ArrayList<String> limitMarketingList = (ArrayList<String>)request.getAttribute("limitMarketing");
+//				company.setLimitSharingList(limitSharingList);
+//				company.setLimitMarketingList(limitMarketingList);
 				
 				request.getSession(false).setAttribute("company", company);
 				
