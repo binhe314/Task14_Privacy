@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reason</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">Interactive Form Builder</a>
+			</div>
+		
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+	<br />
+	<br />
+	<br />
+	<br />
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<form role="form" id="form">
+				<table class="table">
+				<thead>
+					<tr>
+						<th>
+							Reasons we can share your personal information
+						</th>
+						<th>
+							Does [insert institute name] share?
+						</th>
+						<th>
+							Can you limit this sharing?
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<b>For our everyday business purposes </b> — such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureaus
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" name="first" onclick="change1(this)">
+								<option id="yes" value="Yes">Yes</option>
+								<option id="no" value="No">No</option>
+								<option id="unknown" value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						
+						
+						<td>
+							<div class="btn-group">
+							<select id="second" name="second">
+								<option id="yes12" value="Yes">Yes</option>
+								<option id="no12" value="No">No</option>
+								<option id="unknown12" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>For our marketing purposes </b> – to offer our products and services to you
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" onclick="change2(this)">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								<option value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="second">
+								<option id="yes22" value="Yes">Yes</option>
+								<option id="no22" value="No">No</option>
+								<option id="unknown22" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>For joint marketing with other financial companies</b>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" onclick="change3(this)">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								<option value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="second">
+								<option id="yes32" value="Yes">Yes</option>
+								<option id="no32" value="No">No</option>
+								<option id="unknown32" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b> For our affiliates' everyday business purposes </b> – information about your transactions and experiences
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" onclick="change4(this)">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								<option value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="second">
+								<option id="yes42" value="Yes">Yes</option>
+								<option id="no42" value="No">No</option>
+								<option id="unknown42" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b> For our affiliates' everyday business purposes </b> – information about your creditworthiness
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" onclick="change5(this)">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								<option value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="second">
+								<option id="yes52" value="Yes">Yes</option>
+								<option id="no52" value="No">No</option>
+								<option id="unknown52" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b> For our affiliates to market to you</b>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" onclick="change6(this)">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								<option value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="second">
+								<option id="yes62" value="Yes">Yes</option>
+								<option id="no62" value="No">No</option>
+								<option id="unknown62" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b> For nonaffiliates to market to you </b> — for all credit card accounts
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" onclick="change7(this)">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								<option value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="second">
+								<option id="yes72" value="Yes">Yes</option>
+								<option id="no72" value="No">No</option>
+								<option id="unknown72" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b> For nonaffiliates to market to you </b> — for accounts and services endorsed by another organization (e.g., debit card co-branded with a baseball team) “Sponsored Accounts”
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" onclick="change8(this)">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								<option value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="second">
+								<option id="yes82" value="Yes">Yes</option>
+								<option id="no82" value="No">No</option>
+								<option id="unknown82" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b> For nonaffiliates to market to you </b> — for accounts other than credit card accounts and Sponsored Accounts, such as insurance, investments, deposit and lending
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="first" onclick="change9(this)">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								<option value="Noshare">We don't share it</option>
+							</select>
+							</div>
+						</td>
+						<td>
+							<div class="btn-group">
+							<select id="second">
+								<option id="yes92" value="Yes">Yes</option>
+								<option id="no92" value="No">No</option>
+								<option id="unknown92" value="Noshare">We don't share it</option>
+
+							</select>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+<div style="text-align:right">
+				<button type="submit" class="btn btn-default"><a href="1fact.html">Previous</a></button>
+				<button type="submit" class="btn btn-default"><a href="3opt-out.html">Continue</a></button>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script>
+function change1(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes12").disabled = true;
+		document.getElementById("no12").selected = true;
+	}  else {
+		document.getElementById("yes12").disabled = false;
+	}
+}
+
+function change2(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes22").disabled = true;
+		document.getElementById("no22").selected = true;
+	}  else {
+		document.getElementById("yes22").disabled = false;
+	}
+}
+
+function change3(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes32").disabled = true;
+		document.getElementById("no32").selected = true;
+	}  else {
+		document.getElementById("yes32").disabled = false;
+	}
+}
+
+function change4(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes42").disabled = true;
+		document.getElementById("no42").selected = true;
+	}  else {
+		document.getElementById("yes42").disabled = false;
+	}
+}
+
+function change5(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes52").disabled = true;
+		document.getElementById("no52").selected = true;
+	}  else {
+		document.getElementById("yes52").disabled = false;
+	}
+}
+
+function change6(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes62").disabled = true;
+		document.getElementById("no62").selected = true;
+	}  else {
+		document.getElementById("yes62").disabled = false;
+	}
+}
+
+function change7(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes72").disabled = true;
+		document.getElementById("no72").selected = true;
+	}  else {
+		document.getElementById("yes72").disabled = false;
+	}
+}
+
+function change8(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes82").disabled = true;
+		document.getElementById("no82").selected = true;
+	}  else {
+		document.getElementById("yes82").disabled = false;
+	}
+}
+
+function change9(a) {
+	var x = (a.value || a.options[a.selectedIndex].value);
+	 if(x == "No"){
+		document.getElementById("yes92").disabled = true;
+		document.getElementById("no92").selected = true;
+	}  else {
+		document.getElementById("yes92").disabled = false;
+	}
+}
+</script>
+						
+						
+</body>
+</html>
