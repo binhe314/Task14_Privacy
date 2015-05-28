@@ -35,9 +35,9 @@ public class OptOutAction extends Action {
 				request.setAttribute("companyPhone", company.getCompanyPhone());
 				
 				System.out.println("year 1 is " + request.getParameter("year1"));
-				company.setYear1((int)request.getAttribute("year1"));
-				company.setYear2((int)request.getAttribute("year2"));
-				company.setDay((int)request.getAttribute("day"));
+				company.setYear1(request.getParameter("year1"));
+				company.setYear2(request.getParameter("year2"));
+				company.setDay(request.getParameter("day"));
 				
 //				ArrayList<String> limitSharingList = (ArrayList<String>)request.getAttribute("limitSharing");
 //				ArrayList<String> limitMarketingList = (ArrayList<String>)request.getAttribute("limitMarketing");

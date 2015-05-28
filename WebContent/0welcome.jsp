@@ -57,9 +57,9 @@
 							<input type="submit" class="btn btn-default" name="upload" value="Upload File"/>
 						</div>
 					</div>
-
-					or  Start a new one:
-
+					<br>
+					<h4>or  Start a new one: </h4>
+					<br>
 					<div class="form-group">
 						<label for="name">Financial Institute Name</label><input
 							type="text" class="form-control" name="companyName">
@@ -75,7 +75,7 @@
 					</div>
 
 					<div style="text-align: right">
-						<input type="submit" name="action" value="Continue" />
+						<input type="submit" class="btn btn-default" name="action" value="Continue" />
 					</div>
 				</form>
 			</div>
