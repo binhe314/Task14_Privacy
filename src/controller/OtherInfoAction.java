@@ -34,20 +34,20 @@ public class OtherInfoAction extends Action {
 	        request.setAttribute("form",form);
 
 	        if (!form.isPresent()) {
-	            return "otherInfo.jsp";
+	            return "welcome.jsp";
 	        }
 	
 			String location = (String) request.getParameter("location");
 			System.out.println(location);
 			if(location=="Yes"){
-				return "otherInfo2.jsp";
+				return "welcome.jsp";
 			}else{
 	
 	      
-	        return "otherInfo.jsp";
+	        return "welcome.jsp";
 			}
         } catch (FormBeanException e) {
-        	return "otherInfo.jsp";
+        	return "welcome.jsp";
         }
     }
 }

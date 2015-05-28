@@ -26,13 +26,8 @@ public class WelcomeAction extends Action {
 			
 			try {
 				
-				request.setAttribute("company", );
 
-				User user = (User) request.getSession(false).getAttribute("user");
-				Favorite[] favoriteList = favoriteDAO.getItems(user.getUserId());
-				request.setAttribute("favoriteList", favoriteList);
-
-				return "favorite.jsp";
+				return "welcome.jsp";
 			} catch (Exception e) {
 				//System.out.println("e2 = " + e.toString());
 				errors.add(e.getMessage());
