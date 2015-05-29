@@ -285,19 +285,24 @@ p {
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Affiliates</b></td>
-			<td width="70%" id="affiliates"></td>
+			<td width="70%" id="affiliates">
+			${company.generalAffiliates } <br />
+			${company.affiliateSeeMoreAt } <br />
+			<c:forEach var="test" items="${company.affiliateFinancialCompanies }" >
+			${test } <br />
+			</c:forEach>
+			</td>
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Nonaffiliates</b></td>
 			<td width="70%" id="nonaffiliates">
-			Companies not related by common ownership or control. They can be financial and nonfinancial companies.<br />
 			${company.nonAffiliates }
 			</td>
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Joint marketing</b></td>
 			<td width="70%" id="jointMarketing">
-			A formal agreement between nonaffiliated financial companies that together market financial products or services to you. <br />
+			
 			${company.jointMarketing }
 			</td>
 		</tr>

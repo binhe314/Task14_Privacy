@@ -48,12 +48,9 @@
 			<label><strong>Affiliates</strong></label> <br> Companies
 			related by common ownership or control. They can be financial and
 			nonfinancial companies. <br> Our affiliates include <br>
-			<div id="newDescription">
+			
 				<input type="text" size="72" name="generalAffiliates" value="generalAffiliates"
 					placeholder="eg.  companies with a U.S. Bank and U.S. Bancorp name" />
-				<button type="submit" class="btn" onclick="addDesc()">Add a
-					general description</button>
-			</div>
 			or see more at: <br> <input type="text" name="affiliateSeeMoreAt" value="affiliateSeeMoreAt" placeholder="http://"
 				size="80" /><br>
 			financial companies such as<br>
@@ -96,14 +93,9 @@
 
 
 	<script>
-	function addDesc(){
-		var newDesc = document.getElementById("newDescription");
-		newDesc.innerHTML += "<br /><input type='text' size='72' placeholder='eg.  companies with a U.S. Bank and U.S. Bancorp name'/>";
-	}	
-	
 	function addComp() {
 		var newComp = document.getElementById("newCompany");
-		newComp.innerHTML += "<br /><input type='text' placeholder='Company Name'/> <input type='text' placeholder='http://' size='50' />";
+		newComp.innerHTML += "<br /><input type='text' name='affiliateList' placeholder='Company Name'/>";
 	}
 	</script>
 </body>
