@@ -11,6 +11,7 @@ import model.Model;
 import org.mybeans.form.FormBeanFactory;
 
 import databeans.Company;
+import databeans.OtherCompany;
 import form.WelcomeForm;
 
 public class Definition extends Action {
@@ -38,7 +39,28 @@ public class Definition extends Action {
 			Company company = (Company) session.getAttribute("company");
 			String action = (String) request.getParameter("action");
 			
+			String generalAffiliates = request.getParameter("generalAffiliates");
+			String affiliateSeeMoreAt = request.getParameter("affiliateSeeMoreAt");
+			String[] affiliateList = request.getParameterValues("affiliateList");
+
+			ArrayList<String> affiliateFinancialCompanies = new ArrayList<String>();
+			for (int i = 0; i < affiliateList.length; i++) {
+				affiliateFinancialCompanies.add(affiliateList[i]);
+			}
 			
+			
+            String nonAffiliates = request.getParameter("nonAffiliates");
+			String jointMarketing = request.getParameter("jointMarketing");
+			
+			company.setGeneralAffiliates(generalAffiliates);
+			company.setAffiliateSeeMoreAt(affiliateSeeMoreAt);
+			company.setAffiliateFinancialCompanies(affiliateFinancialCompanies);
+			company.setNonAffiliates(nonAffiliates);
+			company.setJointMarketing(jointMarketing);
+			
+			
+			request.getSession(false).setAttribute("company", company);
+
 			
 			if (action.equals("Previous")) {
 				return "4who we are.jsp";

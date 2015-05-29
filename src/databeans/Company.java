@@ -13,12 +13,12 @@ public class Company {
 		this.generalAffiliates = generalAffiliates;
 	}
 
-	public List<OtherCompany> getAffiliateFinancialCompanies() {
+	public List<String> getAffiliateFinancialCompanies() {
 		return affiliateFinancialCompanies;
 	}
 
 	public void setAffiliateFinancialCompanies(
-			List<OtherCompany> affiliateFinancialCompanies) {
+			ArrayList<String> affiliateFinancialCompanies) {
 		this.affiliateFinancialCompanies = affiliateFinancialCompanies;
 	}
 
@@ -60,7 +60,7 @@ public class Company {
 	
 	
 	private String generalAffiliates;
-	private List<OtherCompany> affiliateFinancialCompanies;
+	private List<String> affiliateFinancialCompanies;
 	private String affiliateSeeMoreAt;
 	private String nonAffiliates;
 	private String jointMarketing;
@@ -79,6 +79,7 @@ public class Company {
 	public void setSharedInfo(ArrayList<String> sharedInfo) {
 		this.sharedInfo = sharedInfo;
 	}
+
 
 	public String getYear1() {
 		return year1;

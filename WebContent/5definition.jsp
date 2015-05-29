@@ -49,23 +49,24 @@
 			related by common ownership or control. They can be financial and
 			nonfinancial companies. <br> Our affiliates include <br>
 			<div id="newDescription">
-				<input type="text" size="72"
+				<input type="text" size="72" name="generalAffiliates" value="generalAffiliates"
 					placeholder="eg.  companies with a U.S. Bank and U.S. Bancorp name" />
 				<button type="submit" class="btn" onclick="addDesc()">Add a
 					general description</button>
 			</div>
+			or see more at: <br> <input type="text" name="affiliateSeeMoreAt" value="affiliateSeeMoreAt" placeholder="http://"
+				size="80" /><br>
 			financial companies such as<br>
 			<div id="newCompany">
-				<input type="text" placeholder="Company Name" /> <input type="text"
-					placeholder="http://" size="50" />
+				<input type="text" name="affiliateList" value="affiliateList" placeholder="Company Name" /> 
 				<button type="submit" class="btn" onclick="addComp()">Add
 					another financial company</button>
 			</div>
-			or see more at: <br> <input type="text" placeholder="http://"
-				size="80" /><br>
+		
 			<hr>
 			<label><strong>Nonaffiliates</strong></label> <br>
 			<textarea
+			name="nonAffiliates" value="nonAffiliates"
 				placeholder="Nonaffiliates we share with can include financial services companies such as insurance agencies or mortgage brokers, nonfinancial companies such as retailers, travel companies and membership groups, other companies such as nonprofit groups."
 				rows="4" cols="100"></textarea>
 
@@ -74,6 +75,7 @@
 			<p>A formal agreement between nonaffiliated financial companies
 				that together market financial products or services to you.</p>
 			<textarea
+			name="jointMarketing" value="jointMarketing"
 				placeholder="Our joint marketing partners include financial service companies."
 				rows="4" cols="100"></textarea>
 

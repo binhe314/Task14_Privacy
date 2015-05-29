@@ -121,7 +121,7 @@ public class WhoWeAreAction extends Action{
 			if (action.equals("Previous")) {
 				return "3opt-out.jsp";
 			} else if (action.equals("Continue")) {
-				return "5definition.jsp";
+				return "definition.do";
 			} else {
 				return "4who we are.jsp";
 			}
