@@ -1,6 +1,7 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +32,219 @@ public class FactAction extends Action{
 			for (String s : shared)
 				sharedList.add(s);									// sharedInfo
 		}
+		
+		String[] selected = request.getParameterValues("checkbox");
+
+		ArrayList<Boolean> fiveChecks = new ArrayList<Boolean>();
+		
+		if (Arrays.asList(selected).contains("Income")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Account Balances")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Payment History")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Transaction History")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Transaction or Loss History")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Credit History")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Credit Scores")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Assets")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Investment Experience")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Credit Based Insurance Scores")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Insurance Claim History")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Account Transactions")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Risk Tolerance")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Medical Related Debts")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Credit Card or other debt")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+		}
+		if (Arrays.asList(selected).contains("Mortgage Rates and Payments")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Retirement Assets")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Checking account information")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Employment Information retirement portfolio")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Wire Transfer Instructions")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Medical Information")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Overdraft History")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		if (Arrays.asList(selected).contains("Purchase History")) {
+
+			fiveChecks.add(true);
+
+		} else {
+
+			fiveChecks.add(false);
+
+		}
+		
+		company.setFiveChecks(fiveChecks);
 		
 		if(sharedList.size() < 5 || sharedList.size() >5) {
 			errors.add("Please select 5 types for personal information");

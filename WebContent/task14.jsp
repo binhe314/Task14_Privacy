@@ -342,69 +342,93 @@ p {
 
 
 	<script>
-		function exportXML() {
-			
+	function exportXML() {
+		
 
-			var bank = "<c:out value='${company.companyName}'/>";
-			var phone = "<c:out value='${company.companyPhone}'/>";
-			var url = "<c:out value='${company.companyUrl}'/>";
-			var day = "<c:out value='${company.day}'/>";
-			var year1 = "<c:out value='${company.year1}'/>";
-			var year2 = "<c:out value='${company.year2}'/>";
-			var affiliates = "<c:out value='${company.generalAffiliates}'/>";
-			var nonaffiliates = "<c:out value='${company.nonAffiliates}'/>";
-			var jointmarketing = "<c:out value='${company.jointMarketing}'/>";
-			var details = "<c:out value='${company.location}'/>";
-			var shareornot1 = "<c:out value='${company.shareOrNot.get(0)}'/>";
-			var sharelimit1 = "<c:out value='${company.shareLimit.get(0)}'/>";
-			var shareornot2 = "<c:out value='${company.shareOrNot.get(1)}'/>";
-			var sharelimit2 = "<c:out value='${company.shareLimit.get(1)}'/>";
-			var shareornot3 = "<c:out value='${company.shareOrNot.get(2)}'/>";
-			var sharelimit3 = "<c:out value='${company.shareLimit.get(2)}'/>";
-			var shareornot4 = "<c:out value='${company.shareOrNot.get(3)}'/>";
-			var sharelimit4 = "<c:out value='${company.shareLimit.get(3)}'/>";
-			var shareornot5 = "<c:out value='${company.shareOrNot.get(4)}'/>";
-			var sharelimit5 = "<c:out value='${company.shareLimit.get(4)}'/>";
-			var shareornot6 = "<c:out value='${company.shareOrNot.get(5)}'/>";
-			var sharelimit6 = "<c:out value='${company.shareLimit.get(5)}'/>";
-			var shareornot7 = "<c:out value='${company.shareOrNot.get(6)}'/>";
-			var sharelimit7 = "<c:out value='${company.shareLimit.get(6)}'/>";
-			var shareornot8 = "<c:out value='${company.shareOrNot.get(7)}'/>";
-			var sharelimit8 = "<c:out value='${company.shareLimit.get(7)}'/>";
-			var shareornot9 = "<c:out value='${company.shareOrNot.get(8)}'/>";
-			var sharelimit9 = "<c:out value='${company.shareLimit.get(8)}'/>";
-			var checkbox1 = "<c:out value='${company.limitSharing.get(0)}'/>";
-			var checkbox2 = "<c:out value='${company.limitSharing.get(1)}'/>";
-			var checkbox3 = "<c:out value='${company.limitSharing.get(2)}'/>";
-			var checkbox4 = "<c:out value='${company.limitSharing.get(3)}'/>";
-			var checkbox5 = "<c:out value='${company.limitMarketing.get(0)}'/>";
-			var checkbox6 = "<c:out value='${company.limitMarketing.get(1)}'/>";
-			var checkbox7 = "<c:out value='${company.limitMarketing.get(2)}'/>";
-			var checkbox8 = "<c:out value='${company.limitMarketing.get(3)}'/>";
-			var checkbox9 = "<c:out value='${company.personalInfo.get(0)}'/>";
-			var checkbox10 = "<c:out value='${company.personalInfo.get(1)}'/>";
-			var checkbox11 = "<c:out value='${company.personalInfo.get(2)}'/>";
-			var checkbox12 = "<c:out value='${company.limit.get(0)}'/>";
-			var checkbox13 = "<c:out value='${company.limit.get(1)}'/>";
-			var checkbox14 = "<c:out value='${company.limit.get(2)}'/>";
+		var bank = "<c:out value='${company.companyName}'/>";
+		var phone = "<c:out value='${company.companyPhone}'/>";
+		var url = "<c:out value='${company.companyUrl}'/>";
+		var day = "<c:out value='${company.day}'/>";
+		var year1 = "<c:out value='${company.year1}'/>";
+		var year2 = "<c:out value='${company.year2}'/>";
+		var affiliates = "<c:out value='${company.generalAffiliates}'/>";
+		var nonaffiliates = "<c:out value='${company.nonAffiliates}'/>";
+		var jointmarketing = "<c:out value='${company.jointMarketing}'/>";
+		var details = "<c:out value='${company.location}'/>";
+		var shareornot1 = "<c:out value='${company.shareOrNot.get(0)}'/>";
+		var sharelimit1 = "<c:out value='${company.shareLimit.get(0)}'/>";
+		var shareornot2 = "<c:out value='${company.shareOrNot.get(1)}'/>";
+		var sharelimit2 = "<c:out value='${company.shareLimit.get(1)}'/>";
+		var shareornot3 = "<c:out value='${company.shareOrNot.get(2)}'/>";
+		var sharelimit3 = "<c:out value='${company.shareLimit.get(2)}'/>";
+		var shareornot4 = "<c:out value='${company.shareOrNot.get(3)}'/>";
+		var sharelimit4 = "<c:out value='${company.shareLimit.get(3)}'/>";
+		var shareornot5 = "<c:out value='${company.shareOrNot.get(4)}'/>";
+		var sharelimit5 = "<c:out value='${company.shareLimit.get(4)}'/>";
+		var shareornot6 = "<c:out value='${company.shareOrNot.get(5)}'/>";
+		var sharelimit6 = "<c:out value='${company.shareLimit.get(5)}'/>";
+		var shareornot7 = "<c:out value='${company.shareOrNot.get(6)}'/>";
+		var sharelimit7 = "<c:out value='${company.shareLimit.get(6)}'/>";
+		var shareornot8 = "<c:out value='${company.shareOrNot.get(7)}'/>";
+		var sharelimit8 = "<c:out value='${company.shareLimit.get(7)}'/>";
+		var shareornot9 = "<c:out value='${company.shareOrNot.get(8)}'/>";
+		var sharelimit9 = "<c:out value='${company.shareLimit.get(8)}'/>";
+		var checkbox1 = "<c:out value='${company.limitSharing.get(0)}'/>";
+		var checkbox2 = "<c:out value='${company.limitSharing.get(1)}'/>";
+		var checkbox3 = "<c:out value='${company.limitSharing.get(2)}'/>";
+		var checkbox4 = "<c:out value='${company.limitSharing.get(3)}'/>";
+		var checkbox5 = "<c:out value='${company.limitMarketing.get(0)}'/>";
+		var checkbox6 = "<c:out value='${company.limitMarketing.get(1)}'/>";
+		var checkbox7 = "<c:out value='${company.limitMarketing.get(2)}'/>";
+		var checkbox8 = "<c:out value='${company.limitMarketing.get(3)}'/>";
+		var checkbox9 = "<c:out value='${company.personalInfo.get(0)}'/>";
+		var checkbox10 = "<c:out value='${company.personalInfo.get(1)}'/>";
+		var checkbox11 = "<c:out value='${company.personalInfo.get(2)}'/>";
+		var checkbox12 = "<c:out value='${company.limit.get(0)}'/>";
+		var checkbox13 = "<c:out value='${company.limit.get(1)}'/>";
+		var checkbox14 = "<c:out value='${company.limit.get(2)}'/>";
+		var fivecheck1 = "<c:out value='${company.fiveChecks.get(0)}'/>";
+		var fivecheck2 = "<c:out value='${company.fiveChecks.get(1)}'/>";
+		var fivecheck3 = "<c:out value='${company.fiveChecks.get(2)}'/>";
+		var fivecheck4 = "<c:out value='${company.fiveChecks.get(3)}'/>";
+		var fivecheck5 = "<c:out value='${company.fiveChecks.get(4)}'/>";
+		var fivecheck6 = "<c:out value='${company.fiveChecks.get(5)}'/>";
+		var fivecheck7 = "<c:out value='${company.fiveChecks.get(6)}'/>";
+		var fivecheck8 = "<c:out value='${company.fiveChecks.get(7)}'/>";
+		var fivecheck9 = "<c:out value='${company.fiveChecks.get(8)}'/>";
+		var fivecheck10 = "<c:out value='${company.fiveChecks.get(9)}'/>";
+		var fivecheck11 = "<c:out value='${company.fiveChecks.get(10)}'/>";
+		var fivecheck12 = "<c:out value='${company.fiveChecks.get(11)}'/>";
+		var fivecheck13 = "<c:out value='${company.fiveChecks.get(12)}'/>";
+		var fivecheck14 = "<c:out value='${company.fiveChecks.get(13)}'/>";
+		var fivecheck15 = "<c:out value='${company.fiveChecks.get(14)}'/>";
+		var fivecheck16 = "<c:out value='${company.fiveChecks.get(15)}'/>";
+		var fivecheck17 = "<c:out value='${company.fiveChecks.get(16)}'/>";
+		var fivecheck18 = "<c:out value='${company.fiveChecks.get(17)}'/>";
+		var fivecheck19 = "<c:out value='${company.fiveChecks.get(18)}'/>";
+		var fivecheck20 = "<c:out value='${company.fiveChecks.get(19)}'/>";
+		var fivecheck21 = "<c:out value='${company.fiveChecks.get(20)}'/>";
+		var fivecheck22 = "<c:out value='${company.fiveChecks.get(21)}'/>";
+		var fivecheck23 = "<c:out value='${company.fiveChecks.get(22)}'/>";
+		
 
-			var xml = [ '<?xml version="1.0" encoding="ISO-8859-1"?>',
-						'<document>', '<Reasons>', '<bank>' ]
-						.join('\r\n');
-			
-			xml += [bank + '</bank>','<ShareOrNot>' + shareornot1 + '</ShareOrNot>','<ShareLimit>' + sharelimit1 + '</ShareLimit>','<ShareOrNot>' + shareornot2 + '</ShareOrNot>','<ShareLimit>' + sharelimit2 + '</ShareLimit>','<ShareOrNot>' + shareornot3 + '</ShareOrNot>','<ShareLimit>' + sharelimit3 + '</ShareLimit>','<ShareOrNot>' + shareornot4 + '</ShareOrNot>','<ShareLimit>' + sharelimit4 + '</ShareLimit>','<ShareOrNot>' + shareornot5 + '</ShareOrNot>','<ShareLimit>' + sharelimit5 + '</ShareLimit>','<ShareOrNot>' + shareornot6 + '</ShareOrNot>','<ShareLimit>' + sharelimit6 + '</ShareLimit>','<ShareOrNot>' + shareornot7 + '</ShareOrNot>','<ShareLimit>' + sharelimit7 + '</ShareLimit>','<ShareOrNot>' + shareornot8 + '</ShareOrNot>','<ShareLimit>' + sharelimit8 + '</ShareLimit>','<ShareOrNot>' + shareornot9 + '</ShareOrNot>','<ShareLimit>' + sharelimit9 + '</ShareLimit>','</Reasons>',''].join('\r\n');
-			xml += ['<OptOut>','<LimitShare>','<Checkbox>' + checkbox1 + '</Checkbox>','<Checkbox>' + checkbox2 + '</Checkbox>','<Checkbox>' + checkbox3 + '</Checkbox>','<Checkbox>' + checkbox4 + '</Checkbox>','<Phone>' + phone + '</Phone>','<Url>' + url + '</Url>','<day>' + day + '</day>','</LimitShare>','<LimitMarket>','<Checkbox>' + checkbox5 + '</Checkbox>','<Checkbox>' + checkbox6 + '</Checkbox>','<Checkbox>' + checkbox7 + '</Checkbox>','<Checkbox>' + checkbox8 + '</Checkbox>','<year1>' + year1 + '</year1>','<year2>' + year2 + '</year2>','</LimitMarket>','</OptOut>',''].join('\r\n');
-			xml += ['<WhatWeDo>','<collect>','<Checkbox>' + checkbox9 + '</Checkbox>','<Checkbox>' + checkbox10 + '</Checkbox>','<Checkbox>' + checkbox11 + '</Checkbox>','</collect>','<cantShare>','<Checkbox>' + checkbox12 + '</Checkbox>','<Checkbox>' + checkbox13 + '</Checkbox>','<Checkbox>' + checkbox14 + '</Checkbox>','</cantShare>','</WhatWeDo>',''].join('\r\n');
-			xml += ['<Definition>','<Affiliates>' + affiliates + '</Affiliates>','<Nonaffiliates>' + nonaffiliates + '</Nonaffiliates>','<Jointmarketing>' + jointmarketing + '</Jointmarketing>','</Definition>',''].join('\r\n');
-			xml += ['<OtherInfo>','<Details>' + details + '</Details>','</OtherInfo>',''].join('\r\n');
-			xml += [ '</document>' ];
+		var xml = [ '<?xml version="1.0" encoding="ISO-8859-1"?>',
+					'<document>','']
+					.join('\r\n');
+		xml += ['<Fact>','<5check>' + fivecheck1 + '</5check>','<5check>' + fivecheck2 + '</5check>','<5check>' + fivecheck3 + '</5check>','<5check>' + fivecheck4 + '</5check>','<5check>' + fivecheck5 + '</5check>','<5check>' + fivecheck6 + '</5check>','<5check>' + fivecheck7 + '</5check>','<5check>' + fivecheck8 + '</5check>','<5check>' + fivecheck9 + '</5check>','<5check>' + fivecheck10 + '</5check>','<5check>' + fivecheck11 + '</5check>','<5check>' + fivecheck12 + '</5check>','<5check>' + fivecheck13 + '</5check>','<5check>' + fivecheck14 + '</5check>','<5check>' + fivecheck15 + '</5check>','<5check>' + fivecheck16 + '</5check>','<5check>' + fivecheck17 + '</5check>','<5check>' + fivecheck18 + '</5check>','<5check>' + fivecheck19 + '</5check>','<5check>' + fivecheck20 + '</5check>','<5check>' + fivecheck21 + '</5check>','<5check>' + fivecheck22 + '</5check>','<5check>' + fivecheck23 + '</5check>','</Facts>',''].join('\r\n');
+		xml += ['<Reasons>','<bank>'+ bank + '</bank>','<ShareOrNot>' + shareornot1 + '</ShareOrNot>','<ShareLimit>' + sharelimit1 + '</ShareLimit>','<ShareOrNot>' + shareornot2 + '</ShareOrNot>','<ShareLimit>' + sharelimit2 + '</ShareLimit>','<ShareOrNot>' + shareornot3 + '</ShareOrNot>','<ShareLimit>' + sharelimit3 + '</ShareLimit>','<ShareOrNot>' + shareornot4 + '</ShareOrNot>','<ShareLimit>' + sharelimit4 + '</ShareLimit>','<ShareOrNot>' + shareornot5 + '</ShareOrNot>','<ShareLimit>' + sharelimit5 + '</ShareLimit>','<ShareOrNot>' + shareornot6 + '</ShareOrNot>','<ShareLimit>' + sharelimit6 + '</ShareLimit>','<ShareOrNot>' + shareornot7 + '</ShareOrNot>','<ShareLimit>' + sharelimit7 + '</ShareLimit>','<ShareOrNot>' + shareornot8 + '</ShareOrNot>','<ShareLimit>' + sharelimit8 + '</ShareLimit>','<ShareOrNot>' + shareornot9 + '</ShareOrNot>','<ShareLimit>' + sharelimit9 + '</ShareLimit>','</Reasons>',''].join('\r\n');
+		xml += ['<OptOut>','<LimitShare>','<Checkbox>' + checkbox1 + '</Checkbox>','<Checkbox>' + checkbox2 + '</Checkbox>','<Checkbox>' + checkbox3 + '</Checkbox>','<Checkbox>' + checkbox4 + '</Checkbox>','<Phone>' + phone + '</Phone>','<Url>' + url + '</Url>','<day>' + day + '</day>','</LimitShare>','<LimitMarket>','<Checkbox>' + checkbox5 + '</Checkbox>','<Checkbox>' + checkbox6 + '</Checkbox>','<Checkbox>' + checkbox7 + '</Checkbox>','<Checkbox>' + checkbox8 + '</Checkbox>','<year1>' + year1 + '</year1>','<year2>' + year2 + '</year2>','</LimitMarket>','</OptOut>',''].join('\r\n');
+		xml += ['<WhatWeDo>','<collect>','<Checkbox>' + checkbox9 + '</Checkbox>','<Checkbox>' + checkbox10 + '</Checkbox>','<Checkbox>' + checkbox11 + '</Checkbox>','</collect>','<cantShare>','<Checkbox>' + checkbox12 + '</Checkbox>','<Checkbox>' + checkbox13 + '</Checkbox>','<Checkbox>' + checkbox14 + '</Checkbox>','</cantShare>','</WhatWeDo>',''].join('\r\n');
+		xml += ['<Definition>','<Affiliates>' + affiliates + '</Affiliates>','<Nonaffiliates>' + nonaffiliates + '</Nonaffiliates>','<Jointmarketing>' + jointmarketing + '</Jointmarketing>','</Definition>',''].join('\r\n');
+		xml += ['<OtherInfo>','<Details>' + details + '</Details>','</OtherInfo>',''].join('\r\n');
+		xml += [ '</document>' ];
 
-            var bb = new Blob([xml],{type:'text/plain'});
-			
-			document.getElementById("DownloadLink").setAttribute('href',window.URL.createObjectURL(bb));
-			document.getElementById("DownloadLink").setAttribute('download','task14.xml');
+        var bb = new Blob([xml],{type:'text/plain'});
+		
+		document.getElementById("DownloadLink").setAttribute('href',window.URL.createObjectURL(bb));
+		document.getElementById("DownloadLink").setAttribute('download','task14.xml');
 
-		}
+	}
 	</script>
 
 </body>

@@ -80,6 +80,15 @@ public class Company {
 		this.sharedInfo = sharedInfo;
 	}
 
+private ArrayList<Boolean> fiveChecks;
+	
+	public ArrayList<Boolean> getFiveChecks() {
+		return fiveChecks;
+	}
+
+	public void setFiveChecks(ArrayList<Boolean> fiveChecks) {
+		this.fiveChecks = fiveChecks;
+	}
 
 	public String getYear1() {
 		return year1;
