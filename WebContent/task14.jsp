@@ -159,11 +159,41 @@ This information can include: <br />
 	<table align="center" id="table3">
 		<tr>
 			<td class="td2" width="30%"><b>To limit our sharing</b></td>
-			<td width="70%" id="ifLimitShare"></td>
+			<td width="70%" id="ifLimitShare">
+			<c:if test="${company.limitSharing.get(0).equals(true)}">
+			Call ${company.companyPhone } our menu will prompt you through your choices <br />
+			</c:if>
+			<c:if test="${company.limitSharing.get(1).equals(true)}">
+			Online banking customers log on to a secure session at ${company.companyUrl }, and choose Change Privacy Preferences under the Account Services tab <br />
+			</c:if>
+			<c:if test="${company.limitSharing.get(2).equals(true)}">
+			Talk to a banking center associate <br />
+			</c:if>
+			<c:if test="${company.limitSharing.get(3).equals(true)}">
+			Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer) <br />
+			</c:if>
+			<b>Please note:</b> <br />
+			If you are a new customer, we can begin sharing your information ${company.day } days from the date we sent this notice. When you are no longer our customer, we can continue to share your information as described in this notice. However, you can contact us at any time to limit our sharing.
+			</td>
 		</tr>
 		<tr>
 		<td class="td2"> <b>To limit direct marketing</b></td>
-		<td></td>
+		<td>
+		<c:if test="${company.limitMarketing.get(0).equals(true)}">
+		Call ${company.companyPhone } our menu will prompt you through your choices	 <br />
+			</c:if>
+		<c:if test="${company.limitMarketing.get(1).equals(true)}">
+			Online banking customers log on to a secure session at ${company.companyUrl }, and choose Change Privacy Preferences under the Account Services tab <br />
+			</c:if>
+			<c:if test="${company.limitMarketing.get(2).equals(true)}">
+			Talk to a banking center associate <br />
+			</c:if>
+			<c:if test="${company.limitMarketing.get(3).equals(true)}">
+			Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer) <br />
+			</c:if>
+			<b>Please note:</b> <br />
+			A Do Not Call election is effective for ${company.year1 } years, or while you are an active consumer customer, if longer than ${company.year1 } years. The Do Not Mail election is effective for ${company.year2 } years. You may continue to receive marketing information in regular account mailings and statements when you visit us online or at an ATM. You may also be contacted to service your account or participate in surveys. If you have an assigned client manager or team, they may continue to contact you to assist you in managing your portfolio or account relationship.
+		</td>
 		</tr>
 		<tr>
 			<td class="td2"><b>Questions?</b></td>
@@ -203,17 +233,43 @@ This information can include: <br />
 		<tr>
 			<td class="td2" width="30%"><b>How does ${company.companyName} collect my
 					personal information?</b></td>
-			<td width="70%" id="howCollect"></td>
+			<td width="70%" id="howCollect">
+			We collect your personal information, for example, when you: <br />
+			<c:if test="${company.personalInfo.get(0).equals(true)}">
+			Open an account or make deposits or withdrawals from your accounts <br />
+			</c:if>
+			<c:if test="${company.personalInfo.get(1).equals(true)}">
+			Apply for a loan or use your credit or debit card <br />
+			</c:if>
+			<c:if test="${company.personalInfo.get(2).equals(true)}">
+			Seek advice about your investment or retirement portfolio <br />
+			</c:if>
+			We also collect your personal information from others, such as credit bureaus, affiliates, or other companies.
+			</td>
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Why can't I limit all
 					sharing?</b></td>
-			<td width="70%" id="whyLimit"></td>
+			<td width="70%" id="whyLimit">
+			Federal law gives you the right to limit only: <br />
+			<c:if test="${company.limit.get(0).equals(true)}">
+			Sharing for affiliates everyday business purposes information about your credit worthiness <br />
+			</c:if>
+			<c:if test="${company.limit.get(1).equals(true)}">
+			Affiliates from using your information to market to you <br />
+			</c:if>
+			<c:if test="${company.limit.get(2).equals(true)}">
+			Sharing for nonaffiliates to market to you <br />
+			</c:if>
+			State laws and individual companies may give you additional rights to limit sharing. See below for more on your rights under state law.
+			</td>
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>What happens when I limit
 					sharing for an account I hold jointly with someone else?</b></td>
-			<td width="70%" id="whatHappens"></td>
+			<td width="70%" id="whatHappens">
+			Your choices will apply individually unless you tell us otherwise. Any account holder may express a privacy preference on behalf of the other joint account holders.
+			</td>
 		</tr>
 	</table>
 
@@ -229,11 +285,17 @@ This information can include: <br />
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Nonaffiliates</b></td>
-			<td width="70%" id="nonaffiliates"></td>
+			<td width="70%" id="nonaffiliates">
+			Companies not related by common ownership or control. They can be financial and nonfinancial companies.<br />
+			${company.nonAffiliates }
+			</td>
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Joint marketing</b></td>
-			<td width="70%" id="jointMarketing"></td>
+			<td width="70%" id="jointMarketing">
+			A formal agreement between nonaffiliated financial companies that together market financial products or services to you. <br />
+			${company.jointMarketing }
+			</td>
 		</tr>
 	</table>
 
@@ -244,7 +306,13 @@ This information can include: <br />
 			<th class="th1"><b>Other important information</b></th>
 		</tr>
 		<tr>
-			<td id="otherInformation"></td>
+			<td id="otherInformation">
+			<c:if test="${company.location == 'Yes'}">
+			For Nevada residents only. We may contact our existing customers by telephone to offer additional financial products that we believe may be of interest to you. You have the right to opt out of these calls by adding your name to our internal do-not-call list. To opt out of these calls, or for more information about your opt out rights, please contact our customer service department. You can reach us by calling ${company.companyPhone } or clicking ${company.companyUrl }. You are being provided this notice under Nevada state law. In addition to contacting ${company.companyName }, Nevada residents can contact the Nevada Attorney General for more information about your opt out rights by calling 702-486-3132, emailing aginfo@ag.nv.gov, or by writing to: Office of the Attorney General, Nevada Department of Justice, Bureau of Consumer Protection 100 North Carson Street, Carson City, NV 89701-4717. <br />
+			Vermont: Under Vermont law, we will not share information we collect about Vermont residents with companies outside of our corporate family, unless the law allows. For example, we may share information with your consent, to service your accounts or under joint marketing agreements with other financial institutions with which we have joint marketing agreements. We will not share information about your credit worthiness within our corporate family except with your consent, but we may share information about our transactions or experiences with you within our corporate family without your consent. <br />
+			California: Under California law, we will not share information we collect about you with companies outside of our corporate family, unless the law allows. For example, we may share information with your consent, to service your accounts, or to provide rewards or benefits you are entitled to. We will limit sharing among our companies to the extent required by California law.
+			</c:if>
+			</td>
 		</tr>
 	</table>
 
@@ -252,9 +320,9 @@ This information can include: <br />
 
 	<div style="text-align: center">
 
-			<button type="submit" class="btn btn-default"> <a href="task14.html" id="DownloadLink" onclick="exportXML()" download="task14.xml">Download
+			<button type="submit" class="btn btn-default"> <a href="task14.jsp" id="DownloadLink" onclick="exportXML()" download="task14.xml">Download
 			As XML</a></button>
-			<button type="submit" class="btn btn-default"> <a href="task14.jsp" id="DownloadLink" download="agreement.html">Download
+			 <button type="submit" class="btn btn-default"> <a href="task14.jsp" id="DownloadLink" download="agreement.html">Download
 			As HTML</a></button>
 		<button type="submit" class="btn btn-default">Export As PDF</button>
 	</div>

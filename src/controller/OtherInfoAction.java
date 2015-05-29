@@ -8,10 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 
+
 import org.genericdao.RollbackException;
 import org.mybeans.form.FormBeanException;
 import org.mybeans.form.FormBeanFactory;
 
+import databeans.Company;
 import form.OtherInfoForm;
 
 public class OtherInfoAction extends Action {
@@ -25,7 +27,8 @@ public class OtherInfoAction extends Action {
 	public String perform(HttpServletRequest request) {
 
 		try {
-
+			Company company = (Company) request.getSession(false).getAttribute(
+					"company");
 			// Load the form parameters into a form bean
 			OtherInfoForm form = formBeanFactory.create(request);
 			request.setAttribute("form", form);
@@ -36,6 +39,8 @@ public class OtherInfoAction extends Action {
 
 			String location = (String) request.getParameter("location");
 
+			company.setLocation(location);
+			
 			if (location.equals("Yes")) {
 				return "otherInfo2.jsp";
 			} else {
