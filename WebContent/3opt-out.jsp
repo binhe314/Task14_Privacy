@@ -70,7 +70,7 @@
                      <input type="checkbox" name="limitMarketing" value="3" > Talk to a banking center associate<br>
                      <input type="checkbox" name="limitMarketing" value="4" > Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
                      <b>Please note:<br></b>
-                     A Do Not Call election is effective for <input type="text" name="year1" value=${company.year1} placeholder="Please enter an amount"> years, or while you are an active consumer customer, if longer than <input type="text" name="year1" value=${company.year1} placeholder="Please enter an amount"> years. The Do Not Mail election is effective for <input type="text" name="year2" value=${company.year2} placeholder="Please enter an amount"> years.
+                     A Do Not Call election is effective for <input type="text" name="year1" placeholder="Please enter an amount" value=${company.year1} > years, or while you are an active consumer customer, if longer than <input type="text" name="year1" placeholder="Please enter an amount" value=${company.year1} > years. The Do Not Mail election is effective for <input type="text" name="year2" placeholder="Please enter an amount" value=${company.year2} > years.
                      You may continue to receive marketing information in regular account mailings and statements when you visit us online or at an ATM.
                      You may also be contacted to service your account or participate in surveys. If you have an assigned client manager or team, they may continue to contact you to assist you in managing your portfolio or account relationship.
 					</p>

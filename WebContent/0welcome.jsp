@@ -17,7 +17,21 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 </head>
+<script>
+  var openFile = function(event) {
+    var input = event.target;
 
+    var reader = new FileReader();
+    reader.onload = function(){
+    	var text = reader.result;
+
+    	document.getElementById('output').innerHTML = text;
+    	console.log(text);
+    	//send the text to server
+    };
+    reader.readAsText(input.files[0]);
+  };
+</script>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -45,19 +59,22 @@
 			<div class="col-md-6 column">
 			<jsp:include page="error-list.jsp" />
 
-				<form role="form" method="post" action="welcome.do">
+				<form action="upload.do" method="post" enctype="multipart/form-data">
 				
 					<div class="form-group">
 						<p class="help-block">Please upload file here if you want to
 							continue previous work.</p>
 						<label for="uploadFile">File upload</label>
-						<input type="file"
-							id="uploadFile" name="file" value="${filename}">
+						<input type="file" name="file" title="Select the Backup File" data-filename-placement="inside"/>
+						
 						<div style="text-align: right">
-							<input type="submit" class="btn btn-default" name="upload" value="Upload File"/>
+							<input type="submit" class="btn btn-default" name="upload" value="Upload" />
 						</div>
 					</div>
 					<br>
+				</form>
+				<form role="form" method="post" action="welcome.do">
+
 					<h4>Or you can start a new form </h4>
 					<br>
 					<div class="form-group">

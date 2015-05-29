@@ -25,7 +25,9 @@ public class Controller extends HttpServlet {
         Action.add(new WhoWeAreAction(model));
         Action.add(new ReasonAction(model));
         Action.add(new Definition(model));
+
         Action.add(new FactAction(model));
+        Action.add(new UploadAction(model));
         
     }
 
