@@ -39,6 +39,7 @@
 	<br />
 	<br />
 <div class="container">
+<jsp:include page="error-list.jsp" />
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<form role="form" method="POST" action="fact.do">
