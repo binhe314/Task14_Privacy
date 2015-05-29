@@ -290,10 +290,10 @@ p {
 			related by common ownership or control. They can be financial and
 			nonfinancial companies.<br />
 			Our affiliates include ${company.generalAffiliates } <br />
-			financial companies such as ${company.affiliateSeeMoreAt } <br />
-			See more at: <c:forEach var="test" items="${company.affiliateFinancialCompanies }" >
+			financial companies such as <c:forEach var="test" items="${company.affiliateFinancialCompanies }" >
 			${test } <br />
-			</c:forEach>
+			</c:forEach> <br />
+			See more at: ${company.affiliateSeeMoreAt }
 			</td>
 		</tr>
 		<tr>
@@ -356,7 +356,9 @@ p {
 		var day = "<c:out value='${company.day}'/>";
 		var year1 = "<c:out value='${company.year1}'/>";
 		var year2 = "<c:out value='${company.year2}'/>";
-		var affiliates = "<c:out value='${company.generalAffiliates}'/>";
+		var generalAffiliates = "<c:out value='${company.generalAffiliates}'/>";
+		var affiliateCompanies = "<c:out value='${company.affiliateFinancialCompanies}'/>";
+		var affiliateMore = "<c:out value='${company.affiliateSeeMoreAt}'/>";
 		var nonaffiliates = "<c:out value='${company.nonAffiliates}'/>";
 		var jointmarketing = "<c:out value='${company.jointMarketing}'/>";
 		var details = "<c:out value='${company.location}'/>";
