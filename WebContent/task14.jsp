@@ -286,9 +286,12 @@ p {
 		<tr>
 			<td class="td2" width="30%"><b>Affiliates</b></td>
 			<td width="70%" id="affiliates">
-			${company.generalAffiliates } <br />
-			${company.affiliateSeeMoreAt } <br />
-			<c:forEach var="test" items="${company.affiliateFinancialCompanies }" >
+			Companies
+			related by common ownership or control. They can be financial and
+			nonfinancial companies.<br />
+			Our affiliates include ${company.generalAffiliates } <br />
+			financial companies such as ${company.affiliateSeeMoreAt } <br />
+			See more at: <c:forEach var="test" items="${company.affiliateFinancialCompanies }" >
 			${test } <br />
 			</c:forEach>
 			</td>
@@ -296,13 +299,15 @@ p {
 		<tr>
 			<td class="td2" width="30%"><b>Nonaffiliates</b></td>
 			<td width="70%" id="nonaffiliates">
+			Nonaffiliates we share with can include financial services companies such as insurance agencies or mortgage brokers, nonfinancial companies such as retailers, travel companies and membership groups, other companies such as nonprofit groups. <br />
 			${company.nonAffiliates }
 			</td>
 		</tr>
 		<tr>
 			<td class="td2" width="30%"><b>Joint marketing</b></td>
 			<td width="70%" id="jointMarketing">
-			
+			A formal agreement between nonaffiliated financial companies
+				that together market financial products or services to you. <br />
 			${company.jointMarketing }
 			</td>
 		</tr>
