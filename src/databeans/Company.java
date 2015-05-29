@@ -69,6 +69,16 @@ public class Company {
 	private ArrayList<Boolean> limitMarketing;
 	private ArrayList<Boolean> personalInfo;
 	private ArrayList<Boolean> limit;
+	
+	private ArrayList<String> sharedInfo;
+
+	public ArrayList<String> getSharedInfo() {
+		return sharedInfo;
+	}
+
+	public void setSharedInfo(ArrayList<String> sharedInfo) {
+		this.sharedInfo = sharedInfo;
+	}
 
 	public String getYear1() {
 		return year1;

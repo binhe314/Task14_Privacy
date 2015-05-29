@@ -41,7 +41,7 @@
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-			<form role="form">
+			<form role="form" method="POST" action="fact.do">
 				<div class="form-group">
 					 <h3>FACTS</h3>
 					 <p>WHAT DOES <b>${company.companyName}</b> DO WITH YOUR PERSONAL INFORMATION?</p>
@@ -55,10 +55,78 @@
 					 <h4>What?</h4>
 					 <p>The types of personal information we collect and share depend on the product or service you have with us. <br/>
 					This information can include: <br/>
-					- Social Security number and employment information <br/>
-					- Account balances, transaction history and credit information <br/>
-					- Assets and investment experience <br/>
-					</p>
+					<p>Besides SSN, select only 5 more information types</p>
+					<div id="addinput" onclick="checkBox()">
+						<table>
+							<tr>
+								<td><input type="checkbox" name="checkbox" value="Income">
+									Income</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Account Balances"> Account Balances</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Payment History"> Payment History</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Transaction History"> Transaction History</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="checkbox"
+									value="Transaction or Loss History"> Transaction or
+									Loss History</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Credit History"> Credit History</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Credit Scores"> Credit Scores</td>
+								<td><input type="checkbox" name="checkbox" value="Assets">
+									Assets</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="checkbox"
+									value="Investment Experience"> Investment Experience</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Credit Based Insurance Scores"> Credit Based
+									Insurance Scores</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Insurance Claim History"> Insurance Claim
+									History</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Account Transactions"> Account Transactions</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="checkbox"
+									value="Risk Tolerance"> Risk Tolerance</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Medical Related Debts"> Medical Related Debts</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Credit Card or other debt"> Credit Card or other
+									debt</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Mortgage Rates and Payments"> Mortgage Rates and
+									Payments</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="checkbox"
+									value="Retirement Assets"> Retirement Assets</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Checking account information"> Checking account
+									information</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Employment Information retirement portfolio">
+									Employment Information retirement portfolio</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Wire Transfer Instructions"> Wire Transfer
+									Instructions</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="checkbox"
+									value="Medical Information"> Medical Information</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Overdraft History"> Overdraft History</td>
+								<td><input type="checkbox" name="checkbox"
+									value="Purchase History"> Purchase History</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
 				</div>
 				<div class="form-group">
 					<h4>How?</h4>
@@ -66,13 +134,36 @@
 					</p>
 				</div>
 				<div style="text-align:right">
-				<button type="submit" class="btn btn-default"><a href="0welcome.jsp">Previous</a></button>
-				<button type="submit" class="btn btn-default"><a href="2reason.jsp">Continue</a></button>
+				<input type="submit" class="btn btn-default" name="action" value="Previous">
+				<input type="submit" class="btn btn-default" name="action" value="Continue">
 				<button type="submit" class="btn btn-default"><a href="task14.jsp">Preview</a></button>
 			</div>
 			</form>
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+		function checkBox() {
+
+			var sum1 = 0;
+			var checkboxes1 = document.getElementsByName('checkbox');
+
+			for (var j = 0; j < checkboxes1.length; j++) {
+				if (checkboxes1[j].checked) {
+					sum1++;
+				}
+			}
+
+			if (sum1 > 5) {
+				document.getElementById("error5").style.display = "block";
+				flag = false;
+
+			} else {
+				document.getElementById("error5").style.display = "none";
+			}
+
+		}
+	</script>
+
 </body>
 </html>

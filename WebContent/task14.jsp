@@ -80,11 +80,15 @@ p {
 		</tr>
 		<tr>
 			<td class="td2"><b>What?</b></td>
-			<td id="what">The types of personal information we collect and share depend on the product or service you have with us. <br />
-This information can include: <br />
-- Social Security number and employment information  <br />
-- Account balances, transaction history and credit information <br />
-- Assets and investment experience </td>
+			<td id="what">The types of personal information we collect and
+				share depend on the product or service you have with us. <br />
+				This information can include: <br /> 
+				- Social Security number <br />
+				- ${company.sharedInfo.get(0) } <br />
+				- ${company.sharedInfo.get(1) } <br />
+				- ${company.sharedInfo.get(2) } <br />
+				- ${company.sharedInfo.get(3) } <br />
+				- ${company.sharedInfo.get(4) } <br /></td>
 		</tr>
 		<tr>
 			<td class="td2"><b>How?</b></td>
