@@ -62,6 +62,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change1(this)">
+										    <option value=" " selected="selected"> </option>
 											<option id="yes" value="Yes">Yes</option>
 											<option id="no" value="No">No</option>
 										</select>
@@ -87,6 +88,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change2(this)">
+										    <option value=" " selected="selected"> </option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 										</select>
@@ -110,6 +112,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change3(this)">
+										    <option value=" " selected="selected"> </option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 										</select>
@@ -133,6 +136,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change4(this)">
+										    <option value=" " selected="selected"> </option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 										</select>
@@ -156,6 +160,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change5(this)">
+										    <option value=" " selected="selected"> </option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 										</select>
@@ -178,6 +183,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change6(this)">
+										    <option value=" " selected="selected"> </option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 										</select>
@@ -201,6 +207,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change7(this)">
+										    <option value=" " selected="selected"> </option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 										</select>
@@ -226,6 +233,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change8(this)">
+										    <option value=" " selected="selected"> </option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 										</select>
@@ -250,6 +258,7 @@
 								<td>
 									<div class="btn-group">
 										<select id="first" name="shareOrNot" onclick="change9(this)">
+										    <option value=" " selected="selected"> </option>
 											<option value="Yes">Yes</option>
 											<option value="No">No</option>
 										</select>
