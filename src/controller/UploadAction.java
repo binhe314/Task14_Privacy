@@ -59,6 +59,8 @@ public class UploadAction extends Action {
 			InputStream fileStream = new ByteArrayInputStream(fileByte);
 			
 			Company company = parseXML(fileStream);
+			System.out.println("from company, limitSharing[0] is " + company.getLimitSharing().toString() );
+
 			session.setAttribute("company", company);
 			
 		} catch (FormBeanException e) {
@@ -75,8 +77,7 @@ public class UploadAction extends Action {
 	
 	private static Company parseXML(InputStream itemStream) 
 			throws MalformedURLException, IOException, XMLStreamException{
-		
-		System.out.println("entering parseXML");
+	
 		XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();	
 		XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(itemStream);
 		
@@ -95,6 +96,8 @@ public class UploadAction extends Action {
 				//parse reason table
 				if (elementName.equals("bank")) {
 					event = xmlEventReader.nextEvent();
+	//				String test = xmlEventReader.getElementText() + "11";
+	//				System.out.println("test is " + test);
 					System.out.println("bank is " + event.asCharacters().getData());
 					if (event.asCharacters().getData() != null) 
 						company.setCompanyName(event.asCharacters().getData());					
@@ -122,28 +125,33 @@ public class UploadAction extends Action {
 						shareLimit.add(item);
 				} else if (elementName.equals("day")) {
 					event = xmlEventReader.nextEvent();
-					if (event.asCharacters().getData().isEmpty()) {
-						System.out.println("is empty");
-					}
-					if (!event.asCharacters().getData().isEmpty()) 
-						company.setDay(event.asCharacters().getData());;					
+					if (event.asCharacters().getData() != null)
+						company.setDay(event.asCharacters().getData());			
 				} else if (elementName.equals("year1")) {
 					event = xmlEventReader.nextEvent();
 					if (event.asCharacters().getData() != null) 
-						company.setYear1(event.asCharacters().getData());;					
+						company.setYear1(event.asCharacters().getData());					
 				} else if (elementName.equals("year2")) {
 					event = xmlEventReader.nextEvent();
 					if (event.asCharacters().getData() != null) 
-						company.setYear2(event.asCharacters().getData());;					
+						company.setYear2(event.asCharacters().getData());					
 				} else if (elementName.equals("Nonaffiliates")) {
 					event = xmlEventReader.nextEvent();
 					if (event.asCharacters().getData() != null) 
-						company.setNonAffiliates(event.asCharacters().getData());;					
+						company.setNonAffiliates(event.asCharacters().getData());					
 				} else if (elementName.equals("Jointmarketing")) {
 					event = xmlEventReader.nextEvent();
 					if (event.asCharacters().getData() != null) 
-						company.setJointMarketing(event.asCharacters().getData());;					
+						company.setJointMarketing(event.asCharacters().getData());					
 				} else if (elementName.equals("Checkbox")) {
+					event = xmlEventReader.nextEvent();
+					String item = event.asCharacters().getData();
+					if (item.equals("true")) {
+						checkList.add(true);
+					} else {
+						checkList.add(false);
+					}
+				} else if (elementName.equals("5check")) {
 					event = xmlEventReader.nextEvent();
 					String item = event.asCharacters().getData();
 					if (item.equals("true")) {
@@ -171,17 +179,24 @@ public class UploadAction extends Action {
 		        	}	        	
                     company.setShareOrNot(shareOrNot);
 		        	company.setShareLimit(shareLimit);
+                } else if (endElement.getName().getLocalPart().equals("Fact")) {
+                	company.setFiveChecks(checkList);
+                	for (int i = 0; i < checkList.size(); i++) {
+		        		System.out.println("Fact checkList " + i+ " is " + checkList.get(i));
+		
+		        	}
+                	checkList.clear();
                 } else if (endElement.getName().getLocalPart().equals("LimitShare")) {
                 	company.setLimitSharing(checkList);
                 	for (int i = 0; i < checkList.size(); i++) {
-		        		System.out.println("Limist Share checkList " + i+ " is " + checkList.get(i));
+		        		System.out.println("Limist Share checkList " + i+ " is " + company.getLimitSharing().get(i));
 		
 		        	}
                 	checkList.clear();
                 } else if (endElement.getName().getLocalPart().equals("LimitMarket")) {
                 	company.setLimitMarketing(checkList);
                 	for (int i = 0; i < checkList.size(); i++) {
-		        		System.out.println("Limist Market checkList " + i+ " is " + checkList.get(i));
+		        		System.out.println("Limit Market checkList " + i+ " is " + company.getLimitMarketing().get(i));
 		
 		        	}
                 	checkList.clear();
@@ -191,8 +206,11 @@ public class UploadAction extends Action {
                 } else if (endElement.getName().getLocalPart().equals("cantShare")) {
                 	company.setPersonalInfo(checkList);
                 	checkList.clear();
-                }
+                } 
 		    }
+			
+			
+			
 		      
 		}
 		

@@ -42,7 +42,7 @@
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-			<form role="form" method="POST" action="optOut.do" >
+			<form role="form" id="optout" method="POST" action="optOut.do" >
 				<div class="form-group">
 					<h4>To limit our sharing</h4>
 					<p>
