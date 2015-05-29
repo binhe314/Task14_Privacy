@@ -35,6 +35,7 @@ public class OtherInfoAction extends Action {
 			}
 
 			String location = (String) request.getParameter("location");
+
 			if (location.equals("Yes")) {
 				return "otherInfo2.jsp";
 			} else {

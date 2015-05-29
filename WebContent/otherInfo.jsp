@@ -40,48 +40,27 @@
 	<div class="container">
 		<div class="row clearfix">
 			<div class="col-md-12 column">
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Institute Location</th>
 
-						</tr>
-					</thead>
-					<tbody>
+				<form action="otherInfo.do" method="post">
+					<h4>Institute Location</h4>
+					<br> <b> Is your institute located and have business in
+						one of the three states in US, California, Vermont, Neveda? </b> 
+						<select name="location">
+						<option value="Yes" name="Yes">Yes</option>
+						<option value="No" name="No">No</option>
+						</select>
+					<br><br>
+					<div style="text-align: right">
+						<button type="submit" class="btn btn-default">
+							<a href="5definition.jsp">Previous</a>
+						</button>
+						<button type="submit" class="btn btn-default">Continue</button>
+						<button type="submit" class="btn btn-default">
+							<a href="task14.jsp">Preview</a>
+						</button>
 
-
-						<tr>
-							<td><b> Is your institute located and have business in
-									one of the three states in US,</b> California, Vermont, Neveda?</td>
-							<td>
-								<div class="btn-group">
-									<form action="otherInfo.do" method="post">
-
-										<select name="location">
-											<option value="Yes" name="Yes">Yes</option>
-											<option value="No" name="No">No</option>
-										</select>
-										<br><br>
-										<div style="text-align: right">
-											<button type="submit" class="btn btn-default">
-												<a href="5definition.jsp">Previous</a>
-											</button>
-											<button type="submit" class="btn btn-default">
-												Continue
-											</button>
-											<button type="submit" class="btn btn-default"><a href="task14.jsp">Preview</a></button>
-											
-										</div>
-									</form>
-								</div>
-							</td>
-
-
-						</tr>
-
-					</tbody>
-				</table>
-
+					</div>
+				</form>
 
 			</div>
 		</div>
