@@ -62,16 +62,16 @@
 					<br>
 					<div class="form-group">
 						<label for="name">Financial Institute Name</label><input
-							type="text" class="form-control" name="companyName">
+							type="text" class="form-control" name="companyName" placeholder="Please enter your company's name">
 					</div>
 					<div class="form-group">
 						<label for="website">Website</label><input type="text"
-							class="form-control" name="companyUrl" placeholder="http://">
+							class="form-control" name="companyUrl" placeholder="Please enter your company's website address: http://">
 					</div>
 					
 					<div class="form-group">
 						<label for="website">Contact Number</label><input type="text"
-							class="form-control" name="companyPhone">
+							class="form-control" name="companyPhone" placeholder="Please enter your company's phone">
 					</div>
 
 					<div style="text-align: right">

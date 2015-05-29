@@ -62,7 +62,7 @@
 					 To protect your personal information from unauthorized access and use, 
                      we use security measures that comply with federal law. These measures include 
                      computer safeguards and secured files and buildings. For more information, 
-                     visit <input type="text" name="companyUrl" placeholder="http://" value=${company.companyUrl} >
+                     visit <input type="text" name="companyUrl" placeholder="Please enter your company's website address" value=${company.companyUrl} >
 					</p>
 				</div>
 				<div class="form-group">
