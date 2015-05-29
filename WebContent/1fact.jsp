@@ -40,7 +40,7 @@
 	<br />
 <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-6 column">
+		<div class="col-md-12 column">
 			<form role="form">
 				<div class="form-group">
 					 <h3>FACTS</h3>
@@ -68,6 +68,7 @@
 				<div style="text-align:right">
 				<button type="submit" class="btn btn-default"><a href="0welcome.jsp">Previous</a></button>
 				<button type="submit" class="btn btn-default"><a href="2reason.jsp">Continue</a></button>
+				<button type="submit" class="btn btn-default"><a href="task14.jsp">Preview</a></button>
 			</div>
 			</form>
 		</div>

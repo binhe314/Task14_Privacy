@@ -41,18 +41,18 @@
 	<br />
 <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-6 column">
+		<div class="col-md-12 column">
 			<form role="form" method="POST" action="optOut.do" >
 				<div class="form-group">
 					<h4>To limit our sharing</h4>
 					<p>
 					<input type="checkbox" name="limitSharing" value="1" > Call <input type="text" name="companyPhone" value=${company.companyPhone}>
 					 our menu will prompt you through your choices.<br>
-                    <input type="checkbox" name="limitSharing" value="2" >Online banking customers log on to a secure session at <input type="text" name="companyUrl" value=${company.companyUrl}>
+                    <input type="checkbox" name="limitSharing" value="2" > Online banking customers log on to a secure session at <input type="text" name="companyUrl" value=${company.companyUrl}>
 					
                     , and choose Change Privacy Preferences under the Account Services tab.<br>
-                    <input type="checkbox" name="limitSharing" value="3" >Talk to a banking center associate<br>
-                    <input type="checkbox" name="limitSharing" value="4" >Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
+                    <input type="checkbox" name="limitSharing" value="3" > Talk to a banking center associate<br>
+                    <input type="checkbox" name="limitSharing" value="4" > Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
                     <b>Please note:<br></b>
                      If you are a new customer, we can begin sharing your information <input type="text" name="day"> 
                     days from the date we sent this notice. When you are no longer our customer, we can continue to share
@@ -63,12 +63,12 @@
 				<div class="form-group">
 					 <h4>To limit direct marketing</h4>
 					 <p>
-					 <input type="checkbox" name="limitMarketing" value="1" > Call<input type="text" name="companyPhone" value=${company.companyPhone}>
+					 <input type="checkbox" name="limitMarketing" value="1" > Call <input type="text" name="companyPhone" value=${company.companyPhone}>
 					 our menu will prompt you through your choices.<br>
-                     <input type="checkbox" name="limitMarketing" value="2" >Online banking customers log on to a secure session at <input type="text" name="companyUrl" value=${company.companyUrl}>
+                     <input type="checkbox" name="limitMarketing" value="2" > Online banking customers log on to a secure session at <input type="text" name="companyUrl" value=${company.companyUrl}>
 					 , and choose Change Privacy Preferences under the Account Services tab.<br>
-                     <input type="checkbox" name="limitMarketing" value="3" >Talk to a banking center associate<br>
-                     <input type="checkbox" name="limitMarketing" value="4" >Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
+                     <input type="checkbox" name="limitMarketing" value="3" > Talk to a banking center associate<br>
+                     <input type="checkbox" name="limitMarketing" value="4" > Talk to your assigned account representative (e.g., financial advisor, mortgage loan officer)<br>
                      <b>Please note:<br></b>
                      A Do Not Call election is effective for <input type="text" name="year1" value=${company.year1}> years, or while you are an active consumer customer, if longer than <input type="text" name="year1" value=${company.year1}> years. The Do Not Mail election is effective for <input type="text" name="year2" value=${company.year2}> years.
                      You may continue to receive marketing information in regular account mailings and statements when you visit us online or at an ATM.
@@ -85,6 +85,7 @@
 				<div style="text-align:right">
 				<input type="submit" class="btn btn-default" name="action" value="Previous">
 				<input type="submit" class="btn btn-default" name="action" value="Continue">
+				<button type="submit" class="btn btn-default"><a href="task14.jsp">Preview</a></button>
 				</div>
 			</form>
 		</div>

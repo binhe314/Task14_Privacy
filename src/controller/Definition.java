@@ -37,27 +37,21 @@ public class Definition extends Action {
 			HttpSession session = request.getSession(true);
 			Company company = (Company) session.getAttribute("company");
 			String action = (String) request.getParameter("action");
-			if (action != null) {
-				if (action.equals("Continue")) {
-					WelcomeForm form = formBeanFactory.create(request);
-					
-					errors.addAll(form.getValidationErrors());
-					
-					if (errors.size() != 0) {
-						return "0welcome.jsp";
-					}
-					company.setCompanyName(form.getCompanyName());
-					company.setCompanyUrl(form.getCompanyUrl());
-					company.setCompanyPhone(form.getCompanyPhone());
-					session.setAttribute("company", company);
-					return "index.jsp";
-				}
+			
+			
+			
+			if (action.equals("Previous")) {
+				return "4who we are.jsp";
+			} else if (action.equals("Continue")) {
+				return "otherInfo.jsp";
+			} else {
+				return "5definition.jsp";
 			}
-			return "0welcome.jsp";
+			
 		} catch (Exception e) {
 			// System.out.println("e2 = " + e.toString());
 			errors.add(e.getMessage());
-			return "0welcome.jsp";
+			return "5definition.jsp";
 		}
 	}
 

@@ -48,8 +48,8 @@
 				<form role="form" method="post" action="welcome.do">
 				
 					<div class="form-group">
-						<p class="help-block">Please upload file if you want to
-							continue previous modification.</p>
+						<p class="help-block">Please upload file here if you want to
+							continue previous work.</p>
 						<label for="uploadFile">File upload</label>
 						<input type="file"
 							id="uploadFile" name="file" value="${filename}">
@@ -58,7 +58,7 @@
 						</div>
 					</div>
 					<br>
-					<h4>or  Start a new one: </h4>
+					<h4>Or you can start a new form </h4>
 					<br>
 					<div class="form-group">
 						<label for="name">Financial Institute Name</label><input
@@ -66,7 +66,7 @@
 					</div>
 					<div class="form-group">
 						<label for="website">Website</label><input type="text"
-							class="form-control" name="companyUrl">
+							class="form-control" name="companyUrl" placeholder="http://">
 					</div>
 					
 					<div class="form-group">

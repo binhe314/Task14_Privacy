@@ -41,7 +41,7 @@
 	<br />
 <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-6 column">
+		<div class="col-md-12 column">
 			<form role="form" method="POST" action="whoWeAre.do">
 				<div class="form-group">
 					 <h3>Who We Are?</h3>
@@ -49,14 +49,14 @@
 				<div class="form-group">
 					<h4>who is providing this notice?</h4>
 					<p>
-					<input type="text" name="companyName" value=${company.companyName}>
+					${company.companyName}
 					</p>
 				</div>
 				<div class="form-group">
 					 <h3>What We Do?</h3>
 				</div>
 				<div class="form-group">
-					 <h4>How does <input type="text" name="companyName" value=${company.companyName} >
+					 <h4>How does ${company.companyName} 
 					  protect my personal information?</h4>
 					 <p>
 					 To protect your personal information from unauthorized access and use, 
@@ -66,22 +66,22 @@
 					</p>
 				</div>
 				<div class="form-group">
-					<h4>How does <input type="text" name="companyName" value=${company.companyName} > collect my personal information?</h4>
+					<h4>How does ${company.companyName} collect my personal information?</h4>
 					<p>
 					 We collect your personal information, for example, when you:<br>
-                    <input type="checkbox" name="personalInfo" value="1" >Open an account or make deposits or withdrawals from your accounts<br>
-                    <input type="checkbox" name="personalInfo" value="2" >Apply for a loan or use your credit or debit card<br>
-                    <input type="checkbox" name="personalInfo" value="3" >Seek advice about your investment or retirement portfolio<br>
+                    <input type="checkbox" name="personalInfo" value="1" > Open an account or make deposits or withdrawals from your accounts<br>
+                    <input type="checkbox" name="personalInfo" value="2" > Apply for a loan or use your credit or debit card<br>
+                    <input type="checkbox" name="personalInfo" value="3" > Seek advice about your investment or retirement portfolio<br>
                     We also collect your personal information from others, such as credit bureaus, affiliates, or other companies.
 					</p>
 				</div>
 				<div class="form-group">
 					 <h4>Why can't I limit sharing?</h4>
 					 <p>
-					 Federal law gives you the right to limit only:
-                     <input type="checkbox" name="limit" value = "1" >Sharing for affiliates everyday business purposes information about your creditworthiness<br>
-                     <input type="checkbox" name="limit" value = "2" >Affiliates from using your information to market to you<br>
-                     <input type="checkbox" name="limit" value = "3" >Sharing for nonaffiliates to market to you<br>
+					 Federal law gives you the right to limit only:<br>
+                     <input type="checkbox" name="limit" value = "1" > Sharing for affiliates everyday business purposes information about your creditworthiness<br>
+                     <input type="checkbox" name="limit" value = "2" > Affiliates from using your information to market to you<br>
+                     <input type="checkbox" name="limit" value = "3" > Sharing for nonaffiliates to market to you<br>
                      State laws and individual companies may give you additional rights to limit sharing. See below for more on your rights under state law.
 					</p>
 				</div>
@@ -95,6 +95,8 @@
 				<div style="text-align:right">
 				<input type="submit" class="btn btn-default" name="action" value="Previous">
 				<input type="submit" class="btn btn-default" name="action" value="Continue">
+				<button type="submit" class="btn btn-default"><a href="task14.jsp">Preview</a></button>
+				
 				</div>
 			</form>
 		</div>

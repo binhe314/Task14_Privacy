@@ -38,7 +38,7 @@
 	<br />
 <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-6 column">
+		<div class="col-md-12 column">
 				<div class="form-group">
 					 <h3>Other Important Information</h3>
 				</div>
@@ -61,7 +61,7 @@
 				<form>
 				<button type = "submit" class="btn btn-default"><a href="otherInfo.jsp">Previous</a></button>
 				<button type = "submit"  class="btn btn-default"><a href="task14.jsp">Submit</a></button>
-			</form>>
+			</form>
 			</div>
 		</div>
 	</div>

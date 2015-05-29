@@ -61,13 +61,16 @@
 											<option value="Yes" name="Yes">Yes</option>
 											<option value="No" name="No">No</option>
 										</select>
+										<br><br>
 										<div style="text-align: right">
 											<button type="submit" class="btn btn-default">
 												<a href="5definition.jsp">Previous</a>
 											</button>
 											<button type="submit" class="btn btn-default">
-												Continue</a>
+												Continue
 											</button>
+											<button type="submit" class="btn btn-default"><a href="task14.jsp">Preview</a></button>
+											
 										</div>
 									</form>
 								</div>

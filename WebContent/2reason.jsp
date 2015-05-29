@@ -284,6 +284,7 @@
 			<div style="text-align:right">
 				<input type="submit" class="btn btn-default" name="action" value="Previous">
 				<input type="submit" class="btn btn-default" name="action" value="Continue">
+				<button type="submit" class="btn btn-default"><a href="task14.jsp">Preview</a></button>
 			</div>
 			</form>
 		</div>
