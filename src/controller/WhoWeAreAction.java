@@ -1,6 +1,7 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -40,6 +41,80 @@ public class WhoWeAreAction extends Action{
 //			ArrayList<String> limitList = (ArrayList<String>) request.getAttribute("limit");
 //			company.setPersonalInfoList(personalInfoList);
 //			company.setLimitList(limitList);
+			
+			String[] selected = request.getParameterValues("personalInfo");
+
+			ArrayList<Boolean> personalInfo = new ArrayList<Boolean>();
+
+			if (Arrays.asList(selected).contains("1")) {
+
+				personalInfo.add(true);
+
+			} else {
+
+				personalInfo.add(false);
+
+			}
+
+			if (Arrays.asList(selected).contains("2")) {
+
+				personalInfo.add(true);
+
+			} else {
+
+				personalInfo.add(false);
+
+			}
+
+			if (Arrays.asList(selected).contains("3")) {
+
+				personalInfo.add(true);
+
+			} else {
+
+				personalInfo.add(false);
+
+			}
+
+
+			String[] selected2 = request.getParameterValues("limit");
+
+			ArrayList<Boolean> limit = new ArrayList<Boolean>();
+
+			if (Arrays.asList(selected2).contains("1")) {
+
+				limit.add(true);
+
+			} else {
+
+				limit.add(false);
+
+			}
+
+			if (Arrays.asList(selected2).contains("2")) {
+
+				limit.add(true);
+
+			} else {
+
+				limit.add(false);
+
+			}
+
+			if (Arrays.asList(selected2).contains("3")) {
+
+				limit.add(true);
+
+			} else {
+
+				limit.add(false);
+
+			}
+
+			
+
+			company.setPersonalInfo(personalInfo);
+			company.setLimit(limit);
 			
 			request.getSession(false).setAttribute("company", company);
 			

@@ -1,6 +1,7 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -43,6 +44,97 @@ public class OptOutAction extends Action {
 //				ArrayList<String> limitMarketingList = (ArrayList<String>)request.getAttribute("limitMarketing");
 //				company.setLimitSharingList(limitSharingList);
 //				company.setLimitMarketingList(limitMarketingList);
+				
+				String[] selected = request.getParameterValues("limitSharing");
+
+				ArrayList<Boolean> limitSharing = new ArrayList<Boolean>();
+
+				if (Arrays.asList(selected).contains("1")) {
+
+					limitSharing.add(true);
+
+				} else {
+
+					limitSharing.add(false);
+
+				}
+
+				if (Arrays.asList(selected).contains("2")) {
+
+					limitSharing.add(true);
+
+				} else {
+
+					limitSharing.add(false);
+
+				}
+
+				if (Arrays.asList(selected).contains("3")) {
+
+					limitSharing.add(true);
+
+				} else {
+
+					limitSharing.add(false);
+
+				}
+
+				if (Arrays.asList(selected).contains("4")) {
+
+					limitSharing.add(true);
+
+				} else {
+
+					limitSharing.add(false);
+
+				}
+
+				String[] selected2 = request.getParameterValues("limitMarketing");
+
+				ArrayList<Boolean> limitMarketing = new ArrayList<Boolean>();
+
+				if (Arrays.asList(selected2).contains("1")) {
+
+					limitMarketing.add(true);
+
+				} else {
+
+					limitMarketing.add(false);
+
+				}
+
+				if (Arrays.asList(selected2).contains("2")) {
+
+					limitMarketing.add(true);
+
+				} else {
+
+					limitMarketing.add(false);
+
+				}
+
+				if (Arrays.asList(selected2).contains("3")) {
+
+					limitMarketing.add(true);
+
+				} else {
+
+					limitMarketing.add(false);
+
+				}
+
+				if (Arrays.asList(selected2).contains("4")) {
+
+					limitMarketing.add(true);
+
+				} else {
+
+					limitMarketing.add(false);
+
+				}
+
+				company.setLimitSharing(limitSharing);
+				company.setLimitMarketing(limitMarketing);
 								
 				request.getSession(false).setAttribute("company", company);
 				
