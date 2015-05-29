@@ -324,7 +324,6 @@ This information can include: <br />
 			As XML</a></button>
 			 <button type="submit" class="btn btn-default"> <a href="task14.jsp" id="DownloadLink" download="agreement.html">Download
 			As HTML</a></button>
-		<button type="submit" class="btn btn-default">Export As PDF</button>
 	</div>
 
 	
@@ -335,52 +334,68 @@ This information can include: <br />
 
 	<script>
 		function exportXML() {
-			var xml = [ '<?xml version="1.0" encoding="ISO-8859-1"?>','<document>', '' ]
-					.join('\r\n');
-
-			 var table = document.getElementsByTagName("table");
-			for (i = 0; i < table.length; i++) {
-				var th = table[i].getElementsByTagName("th");
-				var tr = table[i].getElementsByTagName("tr");
-				var td = table[i].getElementsByTagName("td");
-				xml += [ '<table>', '' ].join('\r\n');
-
-				if (th.length != 0) {
-					for (m = 0; m < th.length; m++) {
-						xml += [ '<thead>' + th[m].textContent + '</thead>', '' ].join('\r\n');
-					}
-
-					for (j = 1; j < tr.length; j++) {
-						xml += [ '<tr>', '' ].join('\r\n');
-						for (k = 0; k < td.length/tr.length; k++) {
-							 xml += [ '<td>' + table[i].rows[j].cells[k].textContent + '</td>', '' ].join('\r\n'); 
-						}
-						xml += [ '</tr>', '' ].join('\r\n');
-					}
-				} else {
-					for (j = 0; j < tr.length; j++) {
-						xml += [ '<tr>', '' ].join('\r\n');
-						for (k = 0; k < (td.length / tr.length); k++) {
-							xml += [ '<td>' + table[i].rows[j].cells[k].textContent + '</td>', '' ].join('\r\n'); 
-						}
-						xml += [ '</tr>', '' ].join('\r\n');
-					}
-				}
-
-				xml += [ '</table>', '' ].join('\r\n');
-			} 
-
-		 	xml += '</document>';
-
-			var newXml = new Blob([xml],{type:'text/plain'});
 			
-			document.getElementById("DownloadLink").setAttribute('href',window.URL.createObjectURL(newXml));
+
+			var bank = "<c:out value='${company.companyName}'/>";
+			var phone = "<c:out value='${company.companyPhone}'/>";
+			var url = "<c:out value='${company.companyUrl}'/>";
+			var day = "<c:out value='${company.day}'/>";
+			var year1 = "<c:out value='${company.year1}'/>";
+			var year2 = "<c:out value='${company.year2}'/>";
+			var affiliates = "<c:out value='${company.generalAffiliates}'/>";
+			var nonaffiliates = "<c:out value='${company.nonAffiliates}'/>";
+			var jointmarketing = "<c:out value='${company.jointMarketing}'/>";
+			var details = "<c:out value='${company.location}'/>";
+			var shareornot1 = "<c:out value='${company.shareOrNot.get(0)}'/>";
+			var sharelimit1 = "<c:out value='${company.shareLimit.get(0)}'/>";
+			var shareornot2 = "<c:out value='${company.shareOrNot.get(1)}'/>";
+			var sharelimit2 = "<c:out value='${company.shareLimit.get(1)}'/>";
+			var shareornot3 = "<c:out value='${company.shareOrNot.get(2)}'/>";
+			var sharelimit3 = "<c:out value='${company.shareLimit.get(2)}'/>";
+			var shareornot4 = "<c:out value='${company.shareOrNot.get(3)}'/>";
+			var sharelimit4 = "<c:out value='${company.shareLimit.get(3)}'/>";
+			var shareornot5 = "<c:out value='${company.shareOrNot.get(4)}'/>";
+			var sharelimit5 = "<c:out value='${company.shareLimit.get(4)}'/>";
+			var shareornot6 = "<c:out value='${company.shareOrNot.get(5)}'/>";
+			var sharelimit6 = "<c:out value='${company.shareLimit.get(5)}'/>";
+			var shareornot7 = "<c:out value='${company.shareOrNot.get(6)}'/>";
+			var sharelimit7 = "<c:out value='${company.shareLimit.get(6)}'/>";
+			var shareornot8 = "<c:out value='${company.shareOrNot.get(7)}'/>";
+			var sharelimit8 = "<c:out value='${company.shareLimit.get(7)}'/>";
+			var shareornot9 = "<c:out value='${company.shareOrNot.get(8)}'/>";
+			var sharelimit9 = "<c:out value='${company.shareLimit.get(8)}'/>";
+			var checkbox1 = "<c:out value='${company.limitSharing.get(0)}'/>";
+			var checkbox2 = "<c:out value='${company.limitSharing.get(1)}'/>";
+			var checkbox3 = "<c:out value='${company.limitSharing.get(2)}'/>";
+			var checkbox4 = "<c:out value='${company.limitSharing.get(3)}'/>";
+			var checkbox5 = "<c:out value='${company.limitMarketing.get(0)}'/>";
+			var checkbox6 = "<c:out value='${company.limitMarketing.get(1)}'/>";
+			var checkbox7 = "<c:out value='${company.limitMarketing.get(2)}'/>";
+			var checkbox8 = "<c:out value='${company.limitMarketing.get(3)}'/>";
+			var checkbox9 = "<c:out value='${company.personalInfo.get(0)}'/>";
+			var checkbox10 = "<c:out value='${company.personalInfo.get(1)}'/>";
+			var checkbox11 = "<c:out value='${company.personalInfo.get(2)}'/>";
+			var checkbox12 = "<c:out value='${company.limit.get(0)}'/>";
+			var checkbox13 = "<c:out value='${company.limit.get(1)}'/>";
+			var checkbox14 = "<c:out value='${company.limit.get(2)}'/>";
+
+			var xml = [ '<?xml version="1.0" encoding="ISO-8859-1"?>',
+						'<document>', '<Reasons>', '<bank>' ]
+						.join('\r\n');
+			
+			xml += [bank + '</bank>','<ShareOrNot>' + shareornot1 + '</ShareOrNot>','<ShareLimit>' + sharelimit1 + '</ShareLimit>','<ShareOrNot>' + shareornot2 + '</ShareOrNot>','<ShareLimit>' + sharelimit2 + '</ShareLimit>','<ShareOrNot>' + shareornot3 + '</ShareOrNot>','<ShareLimit>' + sharelimit3 + '</ShareLimit>','<ShareOrNot>' + shareornot4 + '</ShareOrNot>','<ShareLimit>' + sharelimit4 + '</ShareLimit>','<ShareOrNot>' + shareornot5 + '</ShareOrNot>','<ShareLimit>' + sharelimit5 + '</ShareLimit>','<ShareOrNot>' + shareornot6 + '</ShareOrNot>','<ShareLimit>' + sharelimit6 + '</ShareLimit>','<ShareOrNot>' + shareornot7 + '</ShareOrNot>','<ShareLimit>' + sharelimit7 + '</ShareLimit>','<ShareOrNot>' + shareornot8 + '</ShareOrNot>','<ShareLimit>' + sharelimit8 + '</ShareLimit>','<ShareOrNot>' + shareornot9 + '</ShareOrNot>','<ShareLimit>' + sharelimit9 + '</ShareLimit>','</Reasons>',''].join('\r\n');
+			xml += ['<OptOut>','<LimitShare>','<Checkbox>' + checkbox1 + '</Checkbox>','<Checkbox>' + checkbox2 + '</Checkbox>','<Checkbox>' + checkbox3 + '</Checkbox>','<Checkbox>' + checkbox4 + '</Checkbox>','<Phone>' + phone + '</Phone>','<Url>' + url + '</Url>','<day>' + day + '</day>','</LimitShare>','<LimitMarket>','<Checkbox>' + checkbox5 + '</Checkbox>','<Checkbox>' + checkbox6 + '</Checkbox>','<Checkbox>' + checkbox7 + '</Checkbox>','<Checkbox>' + checkbox8 + '</Checkbox>','<year1>' + year1 + '</year1>','<year2>' + year2 + '</year2>','</LimitMarket>','</OptOut>',''].join('\r\n');
+			xml += ['<WhatWeDo>','<collect>','<Checkbox>' + checkbox9 + '</Checkbox>','<Checkbox>' + checkbox10 + '</Checkbox>','<Checkbox>' + checkbox11 + '</Checkbox>','</collect>','<cantShare>','<Checkbox>' + checkbox12 + '</Checkbox>','<Checkbox>' + checkbox13 + '</Checkbox>','<Checkbox>' + checkbox14 + '</Checkbox>','</cantShare>','</WhatWeDo>',''].join('\r\n');
+			xml += ['<Definition>','<Affiliates>' + affiliates + '</Affiliates>','<Nonaffiliates>' + nonaffiliates + '</Nonaffiliates>','<Jointmarketing>' + jointmarketing + '</Jointmarketing>','</Definition>',''].join('\r\n');
+			xml += ['<OtherInfo>','<Details>' + details + '</Details>','</OtherInfo>',''].join('\r\n');
+			xml += [ '</document>' ];
+
+            var bb = new Blob([xml],{type:'text/plain'});
+			
+			document.getElementById("DownloadLink").setAttribute('href',window.URL.createObjectURL(bb));
 			document.getElementById("DownloadLink").setAttribute('download','task14.xml');
-		
-		
+
 		}
-		
-		
 	</script>
 
 </body>
